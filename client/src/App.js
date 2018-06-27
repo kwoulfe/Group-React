@@ -1,13 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Navbar from './Component/Navbar';
 import Cards from './Component/Cards';
-=======
-=======
-
->>>>>>> 1ae794569a488d250797bcc7f4cd021c7c4bfb6e
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./components/Home";
@@ -20,25 +14,9 @@ import Donate from "./components/Donate";
 import ThankYou from "./components/ThankYou";
 
 
-<<<<<<< HEAD
->>>>>>> c22f32b9100945abe0d20f6eca2a2801ffc29f34
-=======
->>>>>>> 1ae794569a488d250797bcc7f4cd021c7c4bfb6e
-
 class App extends Component {
   render() {
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="App">
-        <Navbar />
-        <Cards />
-      </div>
-=======
-=======
-
-
->>>>>>> 1ae794569a488d250797bcc7f4cd021c7c4bfb6e
 
       <div>
 
@@ -60,10 +38,6 @@ class App extends Component {
 
       </div >
 
-<<<<<<< HEAD
->>>>>>> c22f32b9100945abe0d20f6eca2a2801ffc29f34
-=======
->>>>>>> 1ae794569a488d250797bcc7f4cd021c7c4bfb6e
     );
   }
 }
