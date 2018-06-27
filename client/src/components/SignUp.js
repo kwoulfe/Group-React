@@ -45,7 +45,7 @@ const SignUp = () => (
 
             <div class="footer-copyright text-center py-3 fontStyle">© 2018 Copyright:
 
-                        <span> UCD Bootcamp and Tanner McClain</span>
+                        <span> UCD Bootcamp</span>
             </div>
 
         </div>

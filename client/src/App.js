@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import Navbar from './Component/Navbar';
-import Cards from './Component/Cards';
+// import Navbar from './Component/Navbar';
+// import Cards from './Component/Cards';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./components/Home";
