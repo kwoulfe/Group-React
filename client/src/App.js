@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Project from "./components/Project";
 import Donate from "./pages/Donate";
 import ThankYou from "./pages/ThankYou";
+import PostProject from "./pages/PostProject";
 
 
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
               <Route path="/project" component={Project} />
               <Route path="/donate" component={Donate} />
               <Route path="/thankyou" component={ThankYou} />
+              <Route path="/post" component={PostProject} />
               <Route component={Error} />
             </Switch>
             <Footer />
