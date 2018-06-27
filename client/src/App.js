@@ -15,7 +15,9 @@ import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
+import Project from "./components/Project";
 import Donate from "./components/Donate";
+import ThankYou from "./components/ThankYou";
 
 
 <<<<<<< HEAD
@@ -47,7 +49,9 @@ class App extends Component {
               <Route path="/" component={Home} exact />
               <Route path="/login" component={LogIn} />
               <Route path="/signup" component={SignUp} />
+              <Route path="/project" component={Project} />
               <Route path="/donate" component={Donate} />
+              <Route path="/thankyou" component={ThankYou} />
               <Route component={Error} />
             </Switch>
           </div>
