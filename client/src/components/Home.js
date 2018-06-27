@@ -23,7 +23,7 @@ const Home = () => (
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ0qGK86Vd5uCa97hCc-6l9acq9xWEgHpnqUF5lh042iqK1er4" class="img-thumbnail"></img>
                 <div card-body>
                     <p> Example Projecct 1 </p>
-                    <a href="/donate"><button>Check them out!</button></a>
+                    <a href="/project"><button>Check them out!</button></a>
                 </div>
 
             </div>
@@ -32,7 +32,7 @@ const Home = () => (
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ0qGK86Vd5uCa97hCc-6l9acq9xWEgHpnqUF5lh042iqK1er4" class="img-thumbnail"></img>
                 <div card-body>
                     <p> Example Projecct 2 </p>
-                    <a href="/donate"><button>Check them out!</button></a>
+                    <a href="/project"><button>Check them out!</button></a>
 
                 </div>
 
@@ -42,7 +42,7 @@ const Home = () => (
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ0qGK86Vd5uCa97hCc-6l9acq9xWEgHpnqUF5lh042iqK1er4" class="img-thumbnail"></img>
                 <div card-body>
                     <p> Example Projecct 3 </p>
-                    <a href="/donate"><button>Check them out!</button></a>
+                    <a href="/project"><button>Check them out!</button></a>
 
                 </div>
 
@@ -52,7 +52,7 @@ const Home = () => (
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ0qGK86Vd5uCa97hCc-6l9acq9xWEgHpnqUF5lh042iqK1er4" class="img-thumbnail"></img>
                 <div card-body>
                     <p> Example Projecct 4 </p>
-                    <a href="/donate"><button>Check them out!</button></a>
+                    <a href="/project"><button>Check them out!</button></a>
 
                 </div>
 
