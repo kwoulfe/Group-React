@@ -4,14 +4,15 @@ import "./App.css";
 // import Cards from './Component/Cards';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Home from "./components/Home";
-import LogIn from "./components/LogIn";
-import SignUp from "./components/SignUp";
-import Error from "./components/Error";
+import Home from "./pages/Home";
+import LogIn from "./pages/LogIn";
+import SignUp from "./pages/SignUp";
+import Error from "./pages/Error";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import Project from "./components/Project";
-import Donate from "./components/Donate";
-import ThankYou from "./components/ThankYou";
+import Donate from "./pages/Donate";
+import ThankYou from "./pages/ThankYou";
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
               <Route path="/thankyou" component={ThankYou} />
               <Route component={Error} />
             </Switch>
+            <Footer />
           </div>
 
         </Router>

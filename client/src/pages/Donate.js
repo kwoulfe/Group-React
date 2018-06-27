@@ -37,28 +37,18 @@ const Donate = () => (
 
                         </form>
 
-                        
-                            <div class="text-center mt-4">
-                                <a href="/thankyou"><button class="btn btn-outline-warning">Submit<i class="fa fa-paper-plane-o ml-2"></i></button></a>
-                            </div>
 
+                        <div class="text-center mt-4">
+                            <a href="/thankyou"><button class="btn btn-outline-warning">Submit<i class="fa fa-paper-plane-o ml-2"></i></button></a>
                         </div>
+
                     </div>
                 </div>
             </div>
-
-            {/* footer */}
-            <div className="font-small blue1 margin2">
-
-                <div class="footer-copyright text-center py-3 fontStyle">© 2018 Copyright:
-    
-                        <span> UCD Bootcamp</span>
-                </div>
-
-            </div>
+        </div>
 
     </div>
 
-    );
-        
+);
+
 export default Donate;
