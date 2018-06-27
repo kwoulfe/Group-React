@@ -1,7 +1,6 @@
-
 import React from "react";
 
-const SignUp = () => (
+const LogIn = () => (
 
     <div>
 
@@ -10,16 +9,11 @@ const SignUp = () => (
 
             <div className="card">
                 <h1 class="h1-reponsive mb-3 font"><strong>
-                    Sign-up!
+                    Log-In!
                 </strong></h1>
-                <p class="lead font2">Enter the information below to sign-up for an account!</p>
+                <p class="lead font2">Enter your Account information to sign-in!</p>
 
                 <form>
-
-                    <label for="defaultFormContactNameEx" class="grey-text">Your name</label>
-                    <input type="text" id="defaultFormContactNameEx" class="form-control"></input>
-
-                    <br></br>
 
                     <label for="defaultFormContactEmailEx" class="grey-text">Your email</label>
                     <input type="email" id="defaultFormContactEmailEx" class="form-control"></input>
@@ -39,18 +33,8 @@ const SignUp = () => (
             </div>
         </div>
 
-
-        {/* footer */}
-        <div className="font-small blue1 margin2">
-
-            <div class="footer-copyright text-center py-3 fontStyle">© 2018 Copyright:
-
-                        <span> UCD Bootcamp</span>
-            </div>
-
-        </div>
     </div>
 
 );
 
-export default SignUp;
+export default LogIn;
