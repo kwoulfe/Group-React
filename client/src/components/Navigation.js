@@ -14,6 +14,7 @@ const Navigation = () => (
             <a class="nav-link active" href="/">Home</a>
             <a class="nav-link active" href="/login">Log-in</a>
             <a class="nav-link active" href="/signup">Sign-up</a>
+            <a class="nav-link active" href="/post">Post a Project</a>
         </ul>
 
     </div>
