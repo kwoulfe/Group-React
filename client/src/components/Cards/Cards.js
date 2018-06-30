@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cards.css";
+// import { Link } from "react-router-dom";
 
 
 // handleClick = event => {
@@ -9,10 +10,12 @@ import "./Cards.css";
 //     });
 // }
 const Cards = props => (
-    <div className="card" onClick={() => props.handleClick(props.index)}>
+    <div>
 
-        <div className="img-container">
-            <img alt={props.name} src={props.image} />
+        <div className="col-md-3">
+            <div className="card">
+                {props.children}
+            </div>
         </div>
 
     </div>
