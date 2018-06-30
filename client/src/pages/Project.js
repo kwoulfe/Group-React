@@ -11,10 +11,13 @@ class Project extends React.Component {
   };
 
   componentDidMount() {
-    this.getUser();
+    // console.log("~~~~compoenet mounted~~~~")
+    this.getUser(); // match.params.user to get the id
   }
 
-  loadUser = () => {
+  getUser = () => { // recieve user id as parameter
+    // console.log("~~~~getuser CLIENT was called~~~~")
+
     API.getUser(this.props.match.params.id)
       .then(res => this.setState({ users: res.data, name: "", email: "", synopsis: "", image: "" }))
 
@@ -23,6 +26,7 @@ class Project extends React.Component {
   };
 
   render() {
+    console.log("rendering...")
     return (
       <div>
         {/* Jumbotron */}
@@ -31,9 +35,11 @@ class Project extends React.Component {
             <div className="card col-md-9">
               <h1 className="h1-reponsive mb-3 font">
                 <strong>{this.state.users.name}</strong>
-                <strong>{this.state.users.email}</strong>
-                <img src={this.state.users.image} />
               </h1>
+              <h2>
+                <strong>{this.state.users.email}</strong>
+              </h2>
+              <img alt={this.state.users.name} src={this.state.users.image} />
             </div>
 
             <div className="card col-md-3">
