@@ -9,7 +9,7 @@ function Navbar(props) {
             <ul>
                 <li>
                     <a className="Devlogo">
-                        <img src={require("../Assets/logo-02.png")} alt=""></img>
+                        <img src={require("../../Assets/logo-02.png")} alt=""></img>
                         DevHub </a>
                 </li>
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from '../Navbar';
+import Navbar from '../../Components/Navbar';
 import cards from "../../cards.json";
 import './Project.css';
 

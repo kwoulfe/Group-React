@@ -1,49 +1,44 @@
-import React, { Component } from "react";
-import "./App.css";
-import Navbar from './components/Navbar';
-import Cards from './components/Cards';
-import Carousel from "./components/Carousel";
-import Container from "./components/Container";
-import Row from "./components/Row";
-import cards from "./cards.json";
-import Title from './components/Title';
-import Project from './components/Project';
-import Footer from './components/Footer';
-import "./App.css";
+import React, { Component } from 'react';
+import './App.css';
+// import Navbar from './Component/Navbar';
+// import Cards from './Component/Cards';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Home from './Pages/Home';
+import LogIn from './Pages/LogIn';
+import SignUp from './Pages/SignUp';
+import Error from './Pages/Error';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+import Project from './Pages/Project';
+import Donate from './Pages/Donate';
+import ThankYou from './Pages/ThankYou';
+import PostProject from './Pages/PostProject';
 
 
 
 class App extends Component {
-  state = {
-    cards
-  };
   render() {
     return (
-      <div className="App">
-        <Navbar />
-        <Carousel />
-        <Title />
-
-        {/* // Map over this.state.friends and render a FriendCard component for each friend object */}
-        <Container>
-          <Row>
-            {this.state.cards.map(project => (<Cards
-              id={project.id}
-              name={project.name}
-              image={project.image}
-              occupation={project.occupation}
-              location={project.location}
-            />
-            ))}
-
-
-          </Row>
-        </Container>
-        <Project />
-        <Footer />
-
+      <div>
+        <Router>
+          <div>
+            <Navbar />
+            <Switch>
+              <Route path="/" component={Home} exact />
+              <Route path="/login" component={LogIn} />
+              <Route path="/signup" component={SignUp} />
+              <Route path="/project" component={Project} />
+              <Route path="/donate" component={Donate} />
+              <Route path="/thankyou" component={ThankYou} />
+              <Route path="/post" component={PostProject} />
+              <Route component={Error} />
+            </Switch>
+            <Footer />
+          </div>
+        </Router>
       </div>
-    )
+    );
   }
 }
 
