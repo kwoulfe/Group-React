@@ -10,7 +10,7 @@ import SignUp from './pages/SignUp';
 import Error from './pages/Error';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import Project from './components/Project';
+import Project from './pages/Project';
 import Donate from './pages/Donate';
 import ThankYou from './pages/ThankYou';
 import PostProject from './pages/PostProject';
