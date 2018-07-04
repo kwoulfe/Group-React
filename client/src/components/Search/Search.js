@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Search.css';
 
 class Search extends Component {
     state = {
@@ -26,8 +27,10 @@ class Search extends Component {
     render() {
         return (
             <form class="form-inline">
-                <input onChange={this.handleChange} class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name='search' value={this.state.search} />
-                <button  onClick={this.handleSubmit} className="btn btn-primary" type="submit">Search</button>
+                <div className="form-group mb-2">
+                    <input onChange={this.handleChange} class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name='search' value={this.state.search} />
+                    <button onClick={this.handleSubmit} className="btn" type="submit">S</button>
+                </div>
             </form >
         )
     }

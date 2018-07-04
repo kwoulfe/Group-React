@@ -4,16 +4,18 @@ import './App.css';
 // import Cards from './Component/Cards';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Home from './pages/Home';
-import LogIn from './pages/LogIn';
-import SignUp from './pages/SignUp';
-import Error from './pages/Error';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Project from './pages/Project';
-import Donate from './pages/Donate';
-import ThankYou from './pages/ThankYou';
-import PostProject from './pages/PostProject';
+import Home from './Pages/Home';
+import LogIn from './Pages/LogIn';
+import SignUp from './Pages/SignUp';
+import Error from './Pages/Error';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+import Project from './Pages/Project';
+import Donate from './Pages/Donate';
+import ThankYou from './Pages/ThankYou';
+import PostProject from './Pages/PostProject';
+
+
 
 class App extends Component {
   render() {
@@ -21,7 +23,7 @@ class App extends Component {
       <div>
         <Router>
           <div>
-            <Navigation />
+            <Navbar />
             <Switch>
               <Route path="/" component={Home} exact />
               <Route path="/login" component={LogIn} />
