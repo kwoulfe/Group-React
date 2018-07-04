@@ -1,0 +1,27 @@
+.tagline{
+    margin-top: auto;
+    /* float:right; */
+    margin-bottom:auto;
+    text-align: right;
+    flex-wrap:wrap;
+}
+
+ .jumbotron{
+    margin: auto;
+} 
+
+.btn-primary{
+    width:120px;
+    float:right; 
+}
+
+p{
+    text-align:right;
+}
+
+.container{
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+

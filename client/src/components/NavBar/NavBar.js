@@ -6,22 +6,25 @@ import Search from '../Search';
 function Navbar(props) {
     return (
         <nav className="navbar navbar-light bg-light">
-            <ul>
+            <ul className='logo-container'>
                 <li>
-                    <a className="navbar-brand">
-                        <img src=".../public/Assets/logo.png" width="30" height="30" className="Devlogo" alt=""></img>
+                    <a className="Devlogo">
+                        <img src={require("../../Assets/logo-02.png")} alt=""></img>
                         DevHub </a>
                 </li>
+            </ul>
+            <ul className='nav-container'>
                 <li>
-                    <a className="nav-link" href="">Start a Project</a>
+                    <a className="nav-link justify-content-end" href="">Start a Project</a>
                 </li>
 
                 <li>
-                    <a className="nav-link" href="">Log In</a>
+                    <a className="nav-link justify-content-end" href="">Log In</a>
                 </li>
-                <li>
+                <li className="search">
                     <Search />
                 </li>
+
             </ul>
         </nav >
     )
