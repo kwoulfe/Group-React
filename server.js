@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 const PORT = process.env.PORT || 3001;
 const app = express();
-const passport = require('passport');
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,7 +19,9 @@ if (process.env.NODE_ENV === 'production') {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/projectinfo');
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/projectinfo'
+);
 
 // Send every other request to the React app
 // Define any API routes before this runs

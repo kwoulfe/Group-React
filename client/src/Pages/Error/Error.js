@@ -1,18 +1,17 @@
-import React from "react";
-
+import React from 'react';
 
 const Error = () => (
-
-    <div>
-
-        <h1>404 Page Not Found</h1>
-        <h1>
-            <span role="img" aria-label="Face With Rolling Eyes Emoji">
-                🙄
-            </span>
+  <div>
+    {/* Jumbotron */}
+    <div className="jumbotron text-center">
+      <div className="card">
+        <h1 className="h1-reponsive mb-3 font">
+          <strong>Error!</strong>
         </h1>
+        <p className="lead font2">URL Doesn't exist!</p>
+      </div>
     </div>
-
+  </div>
 );
 
 export default Error;

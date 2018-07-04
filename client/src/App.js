@@ -8,14 +8,12 @@ import Home from './Pages/Home';
 import LogIn from './Pages/LogIn';
 import SignUp from './Pages/SignUp';
 import Error from './Pages/Error';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/NavBar';
 import Footer from './Components/Footer';
 import Project from './Pages/Project';
 import Donate from './Pages/Donate';
 import ThankYou from './Pages/ThankYou';
 import PostProject from './Pages/PostProject';
-
-
 
 class App extends Component {
   render() {
