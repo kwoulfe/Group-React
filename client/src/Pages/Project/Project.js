@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Navbar from '../../Components/Navbar';
-import Jumbotron from '../../Components/Jumbotron';
 import Cards from '../../Components/Cards';
 import Footer from '../../Components/Footer';
 import Carousel from '../../Components/Carousel';
@@ -33,23 +32,44 @@ class Project extends React.Component {
     };
     render() {
         return (
-            <div>
-
-                <div className="jumbotron">
-                    <div className="container">
-                        <div className='row devHub-carousel'>
-                            <div className='carousel col-sm-7'>
-                                <Carousel />
+            <div className="jumbotron">
+                <div className="container">
+                    <div className='row devHub-carousel'>
+                        <div className='carousel col-sm-7'>
+                            {/* --carousel-- */}
+                            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active ">
+                                        <img className="d-block w-100" src={this.state.users.image} alt={this.state.users.name} />
+                                    </div>
+                                    <div className="carousel-item">
+                                        <div className="carousel-item active ">
+                                            <img className="d-block w-100" src={this.state.users.image} alt={this.state.users.name} />
+                                        </div>
+                                    </div>
+                                    <div className="carousel-item">
+                                        <div className="carousel-item active ">
+                                            <img className="d-block w-100" src={this.state.users.image} alt={this.state.users.name} />
+                                        </div>
+                                    </div>
+                                    <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="sr-only">Previous</span>
+                                    </a>
+                                    <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="sr-only">Next</span>
+                                    </a>
+                                </div>
                             </div>
-                            <h1 className="display-4 col-sm-4 tagline">Welcome to DevHub!</h1>
-                            <div className="container-1">
+                            <h1>Project details: {this.state.users.synopsis}</h1>
+                            {/* <div className="container-1">
                                 <p className="lead">Make your dream a reality</p>
                                 <a className="btn btn-primary btn-md butt" href="#" role="button">Learn more</a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
-
             </div>
         )
     }

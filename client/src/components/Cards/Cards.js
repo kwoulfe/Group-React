@@ -8,15 +8,27 @@ import "./Cards.css";
 //         [name]: image
 //     });
 // }
+// const Cards = props => (
+//     <div className="col-sm-4">
+//         <div className="card" onClick={() => props.handleClick(props.index)}>
+
+//             <div className="img-container">
+//                 <img alt={props.name} src={props.image} />
+//             </div>
+
+//         </div>
+//     </div>
+// )
+// export default Cards;
 const Cards = props => (
-    <div className="col-sm-4">
-        <div className="card" onClick={() => props.handleClick(props.index)}>
+    <div>
 
-            <div className="img-container">
-                <img alt={props.name} src={props.image} />
+        <div className="col-md-3">
+            <div className="card">
+                {props.children}
             </div>
-
         </div>
+
     </div>
 )
 export default Cards;
