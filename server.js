@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const routes = require('./routes');
 const PORT = process.env.PORT || 3001;
 const app = express();
 const passport = require('passport');
@@ -14,6 +16,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Define API routes here
+
+app.use(routes);
+
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/projectinfo');
 
 // Send every other request to the React app
 // Define any API routes before this runs

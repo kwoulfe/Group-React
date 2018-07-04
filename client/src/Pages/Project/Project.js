@@ -1,45 +1,55 @@
 import React, { Component } from 'react';
 import Navbar from '../../Components/Navbar';
+import Jumbotron from '../../Components/Jumbotron';
+import Cards from '../../Components/Cards';
+import Footer from '../../Components/Footer';
+import Carousel from '../../Components/Carousel';
 import cards from "../../cards.json";
 import './Project.css';
+import API from "../utils/API";
 
-class Project extends Component {
-
+class Project extends React.Component {
     state = {
-        cards
+        users: {},
+        name: "",
+        email: "",
+        synopsis: "",
+        image: ""
+    };
+
+    componentDidMount() {
+        // console.log("~~~~compoenet mounted~~~~")
+        this.getUser(); // match.params.user to get the id
+    }
+
+    getUser = () => { // recieve user id as parameter
+        // console.log("~~~~getuser CLIENT was called~~~~")
+
+        API.getUser(this.props.match.params.id)
+            .then(res => this.setState({ users: res.data, name: "", email: "", synopsis: "", image: "" }))
+
+            .catch(err => console.log(err));
+
     };
     render() {
         return (
             <div>
-                <Navbar />
-                <div className="row">
-                    <div className="col-md-3 card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ0qGK86Vd5uCa97hCc-6l9acq9xWEgHpnqUF5lh042iqK1er4" class="img-thumbnail" alt=""></img>
-                        <div card-body>
-                            <p> Example Projecct 1 </p>
-                            <a href="/donate"><button>Check them out!</button></a>
-                        </div>
 
-                    </div>
-
-                    <div className="col-md-3 card">
-                        <div card-body>
-                            <p> Example Projecct 2 </p>
-                            <a href="/donate"><button>Check them out!</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-9 card">
-                        <form>
-                            <div className="form-group">
-                                <label for="exampleFormControlTextarea1">Example textarea</label>
-                                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                <div className="jumbotron">
+                    <div className="container">
+                        <div className='row devHub-carousel'>
+                            <div className='carousel col-sm-7'>
+                                <Carousel />
                             </div>
-                        </form>
+                            <h1 className="display-4 col-sm-4 tagline">Welcome to DevHub!</h1>
+                            <div className="container-1">
+                                <p className="lead">Make your dream a reality</p>
+                                <a className="btn btn-primary btn-md butt" href="#" role="button">Learn more</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         )
     }
