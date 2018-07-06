@@ -45,33 +45,37 @@ class Home extends Component {
   render() {
     return (
       <div className="App">
-        <Title />
         <Jumbotron />
+        <h3>
+          MARKETPLACE
+        </h3>
 
         {/* // Map over this.state.friends and render a FriendCard component for each friend object */}
-        <Container>
-          <Row>
-            {this.state.users.map(users => (
-              <Cards
-                id={users.id}
-                key={users.id}
-                image={users.image}
-                name={users.name}
-                email={users.email}
-              >
-                <img src={users.image} className="img-thumbnail" alt="" />
-                <div card-body="true">
-                  <p>{users.name}</p>
-                  <p>{users.email}</p>
-                </div>
-                <Link to={'/users/' + users._id}>
-                  <button>Check Them Out</button>
-                </Link>
-              </Cards>
-            ))}
-          </Row>
-        </Container>
-      </div>
+        {/* <Container>
+          <Row> */}
+        {this.state.users.map(users => (
+          <Cards
+            id={users.id}
+            key={users.id}
+            image={users.image}
+            name={users.name}
+            email={users.email}
+          >
+
+            <img src={users.image} className="img-thumbnail" alt="" />
+            <div className="text" card-body="true">
+              <p>{users.synopsis}</p>
+              <p>{users.name}</p>
+              {/* <p>{users.date}</p> */}
+            </div>
+            <Link to={'/users/' + users._id}>
+              <a className="link">View Project</a>
+            </Link>
+          </Cards>
+        ))}
+        {/* </Row>
+        </Container > */}
+      </div >
     );
   }
 }

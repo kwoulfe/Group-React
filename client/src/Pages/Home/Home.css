@@ -1,26 +1,37 @@
-/* .HOme {
-    text-align: center;
-    font-family: 'Encode Sans','Fira Sans Extra', sans-serif;
-  }
-  
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
-  
-  .App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-  }
-  
-  .App-intro {
-    font-size: large;
-  }
-  
-  @keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-   */
+body{
+  font-family: 'Encode Sans','Fira Sans Extra', sans-serif;
+}
+
+h3{
+  font-family: 'Encode Sans','Fira Sans Extra', sans-serif;
+  font-size: 25px;
+  margin-left: 35px;
+  margin-top:20px;
+  /* padding: 10px; */
+  color:#706e6e;
+
+}
+
+.img-thumbnail{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  text-align: center;
+  /* background: grey; */
+}
+.text{
+  font-size: 15px;
+  color:#706e6e;
+  margin-right: 10px !important;
+}
+
+a.link{
+  font-size: 18px;
+  color:#706e6e !important;
+  margin:10px !important;
+
+}
+
+a.link:hover{
+  color:#21f4d1 !important;
+}

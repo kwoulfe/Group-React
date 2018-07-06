@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
+import './Comment.css';
 
 class Comment extends Component {
     render() {
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        return (
+            // <div>
+            //     <form>
+            //         <div class="form-group">
+            //             <label for="exampleFormControlTextarea1">Example textarea</label>
+            //             <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
+            //         </div>
+            //     </form>
+            //     <button type="submit" class="btn btn-primary">Submit</button>
+            // </div>
+            <div className="container">
+                <form>
+                    <div className="form-group">
+                        <label for="exampleFormControlTextarea1">Comments</label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit<i class="fa fa-paper-plane-o ml-2" /></button>
+                </form>
             </div>
-        </form>
-            <button type="submit" class="btn btn-primary">Submit</button>
+        )
     }
 }
+export default Comment;

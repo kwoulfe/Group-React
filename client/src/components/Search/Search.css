@@ -1,3 +1,9 @@
 .search-form{
     display:flex;
 }
+
+.click{
+    width:50%;
+    color:grey;
+    display: inline;
+}

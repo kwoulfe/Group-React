@@ -21,6 +21,11 @@ nav {
   .Devlogo{
       font-size: 20px;
       font-style: bold;
+      color: #706e6e;
+     
+  }
+  .Devlogo:hover{
+    color: rgb(75, 73, 73);
   }
   
 
@@ -34,8 +39,9 @@ nav {
 
   
   .nav-link:hover {
-    text-decoration: underline;
-    color: #21f4d1; 
+    font-style: initial;
+    font-style:'Encode Sans bold',bold; 
+    color:#21f4d1;
   }
  
   

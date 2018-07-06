@@ -22,14 +22,15 @@ import "./Cards.css";
 // )
 // export default Cards;
 const Cards = props => (
-    <div>
-
-        <div className="col-md-3">
-            <div className="card">
-                {props.children}
+    <div className="container">
+        <div className="row">
+            <div className="col-md-3">
+                <div className="card">
+                    {props.children}
+                </div>
             </div>
         </div>
-
     </div>
+
 )
 export default Cards;

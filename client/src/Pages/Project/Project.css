@@ -1,0 +1,14 @@
+body{
+    font-family: 'Encode Sans','Fira Sans Extra', sans-serif;
+    color:#706e6e;
+  }
+  .writeup{
+      position: relative;
+  }
+  h1{
+      font-size: 30px;
+  }
+
+  p{
+      font-size: 20px;
+  }

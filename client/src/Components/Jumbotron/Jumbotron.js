@@ -15,6 +15,7 @@ class Jumbotron extends Component {
                             <p className="lead">Make your dream a reality</p>
                             <a className="btn btn-primary btn-md butt" href="#" role="button">Learn more</a>
                         </div>
+
                     </div>
                 </div>
             </div>

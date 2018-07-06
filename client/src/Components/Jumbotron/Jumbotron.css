@@ -4,7 +4,9 @@
     margin-bottom:auto;
     text-align: right;
     flex-wrap:wrap;
+    
 }
+
 
  .jumbotron{
     margin: auto;
@@ -17,11 +19,33 @@
 
 p{
     text-align:right;
+    
 }
+.tagline{
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 50%;
+      width: 0%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 50%;
+    }
+  }
 
 .container{
     display:flex;
     justify-content: space-evenly;
     flex-direction: column;
+}
+.circle{
+background-color: #21f4d1;
+border-radius: 5em;
+width: 20%;
 }
 

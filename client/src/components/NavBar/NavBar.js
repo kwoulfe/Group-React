@@ -8,18 +8,18 @@ function Navbar(props) {
         <nav className="navbar navbar-light bg-light">
             <ul className='logo-container'>
                 <li>
-                    <a className="Devlogo">
+                    <a className="Devlogo" href="/">
                         <img src={require("../../Assets/logo-02.png")} alt=""></img>
                         DevHub </a>
                 </li>
             </ul>
             <ul className='nav-container'>
                 <li>
-                    <a className="nav-link justify-content-end" href="">Start a Project</a>
+                    <a className="nav-link justify-content-end" href="/post">Start a Project</a>
                 </li>
 
                 <li>
-                    <a className="nav-link justify-content-end" href="">Log In</a>
+                    <a className="nav-link justify-content-end" href="/login">Log In</a>
                 </li>
                 <li className="search">
                     <Search />
