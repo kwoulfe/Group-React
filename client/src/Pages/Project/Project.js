@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import Navbar from '../../Components/NavBar';
-import Cards from '../../Components/Cards';
-import Footer from '../../Components/Footer';
-import Carousel from '../../Components/Carousel';
+// import Navbar from '../../Components/NavBar';
+// import Cards from '../../Components/Cards';
+// import Footer from '../../Components/Footer';
+// import Carousel from '../../Components/Carousel';
 import Comment from '../../Components/Comment';
-import cards from '../../cards.json';
+// import cards from '../../cards.json';
 import './Project.css';
 import API from '../utils/API';
+import { Link } from "react-router-dom";
 
 class Project extends React.Component {
   state = {
@@ -104,9 +105,18 @@ class Project extends React.Component {
                     </a>
                   </div>
                 </div>
-                <div className="writeup col-sm-4">
-                  <h1>Title:{this.state.users.synopsis}</h1>
-                </div>
+                <h1 className="h1-reponsive mb-3 font">
+                  <strong>{this.state.users.name}</strong>
+                </h1>
+                <h2>
+                  <strong>{this.state.users.email}</strong>
+                </h2>
+                <h1 className="h1-reponsive mb-3 font">
+                  <strong>Project details here: {this.state.users.synopsis}</strong>
+                </h1>
+                <Link to={"/donate/" + this.state.users._id}>
+                  <button>Donate</button>
+                </Link>
               </div>
             </div>
           </div>

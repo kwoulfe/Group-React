@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './Home.css';
-import Navbar from '../../Components/NavBar';
+// import Navbar from '../../Components/NavBar';
 import Cards from '../../Components/Cards';
 import API from '../utils/API';
 import { Link } from 'react-router-dom';
 // import Carousel from ".././Components/Carousel";
-import Container from '../../Components/Container';
-import Row from '../../Components/Row';
-import cards from '../../cards.json';
-import Title from '../../Components/Title';
-import Project from '../../Pages/Project';
-import Footer from '../../Components/Footer';
+// import Container from '../../Components/Container';
+// import Row from '../../Components/Row';
+// import cards from '../../cards.json';
+// import Title from '../../Components/Title';
+// import Project from '../../Pages/Project';
+// import Footer from '../../Components/Footer';
 import Jumbotron from '../../Components/Jumbotron';
 
 class Home extends Component {
@@ -50,32 +50,36 @@ class Home extends Component {
           MARKETPLACE
         </h3>
 
-        {/* // Map over this.state.friends and render a FriendCard component for each friend object */}
-        {/* <Container>
-          <Row> */}
-        {this.state.users.map(users => (
-          <Cards
-            id={users.id}
-            key={users.id}
-            image={users.image}
-            name={users.name}
-            email={users.email}
-          >
+        {/* } // Map over this.state.friends and render a FriendCard component for each friend object
+        {/* <Container> */}
+        <div className="container">
+          <div className="row">
+            {this.state.users.map(users => (
+              <div className="col-md-3">
+                <Cards
+                  id={users.id}
+                  key={users.id}
+                  image={users.image}
+                  name={users.name}
+                  email={users.email}
+                >
 
-            <img src={users.image} className="img-thumbnail" alt="" />
-            <div className="text" card-body="true">
-              <p>{users.synopsis}</p>
-              <p>{users.name}</p>
-              {/* <p>{users.date}</p> */}
-            </div>
-            <Link to={'/users/' + users._id}>
-              <a className="link">View Project</a>
-            </Link>
-          </Cards>
-        ))}
-        {/* </Row>
-        </Container > */}
-      </div >
+                  <img src={users.image} className="img-thumbnail" alt="" />
+                  <div className="text" card-body="true">
+                    <p>{users.synopsis}</p>
+                    <p>{users.name}</p>
+                    {/* <p>{users.date}</p> */}
+                  </div>
+                  <Link to={"/users/" + users._id}>
+                    <button className="btn btn-info">View Project</button>
+                  </Link>
+                </Cards>
+              </div>
+            ))}
+          </ div>
+        </ div>
+      </ div>
+
     );
   }
 }

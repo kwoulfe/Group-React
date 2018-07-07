@@ -20,7 +20,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost:27017/projectinfo'
+  process.env.MONGODB_URI || 'mongodb://localhost/projectinfo'
 );
 
 // Send every other request to the React app

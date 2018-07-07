@@ -13,7 +13,7 @@ class Jumbotron extends Component {
                         <h1 className="display-4 col-sm-4 tagline">Welcome to DevHub!</h1>
                         <div className="container-1">
                             <p className="lead">Make your dream a reality</p>
-                            <a className="btn btn-primary btn-md butt" href="#" role="button">Learn more</a>
+                            <a className="btn btn-primary btn-md butt" href="" role="button">Learn more</a>
                         </div>
 
                     </div>
