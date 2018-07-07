@@ -10,14 +10,17 @@ const userSeed = [
   {
     name: 'Ifra',
     email: 'Ifra@Ifra.com',
+    title: 'Project',
     synopsis:
       "Explore the project and fund it to your liking",
     date: new Date(Date.now()),
     image: 'http://www.sciencemag.org/sites/default/files/styles/article_main_large/public/cc_iStock-478639870_16x9.jpg?itok=1-jMc4Xv'
+
   },
   {
     name: 'Shaughn',
     email: 'Shaughn@Shaughn.com',
+    title: 'Project',
     synopsis:
       "Explore the project and fund it to your liking", date: new Date(Date.now()),
     image: 'http://www.sciencemag.org/sites/default/files/styles/article_main_large/public/cc_iStock-478639870_16x9.jpg?itok=1-jMc4Xv'
@@ -25,6 +28,7 @@ const userSeed = [
   {
     name: 'Tanner',
     email: 'Tanner@Tanner.com',
+    title: 'Project',
     synopsis:
       "Explore the project and fund it to your liking", date: new Date(Date.now()),
     image: 'http://www.sciencemag.org/sites/default/files/styles/article_main_large/public/cc_iStock-478639870_16x9.jpg?itok=1-jMc4Xv'
@@ -32,6 +36,7 @@ const userSeed = [
   {
     name: 'Kevin',
     email: 'Kevin@Kevin.com',
+    title: 'Project',
     synopsis:
       "Explore the project and fund it to your liking", date: new Date(Date.now()),
     image: 'http://www.sciencemag.org/sites/default/files/styles/article_main_large/public/cc_iStock-478639870_16x9.jpg?itok=1-jMc4Xv'
@@ -39,6 +44,7 @@ const userSeed = [
   {
     name: 'Kevin',
     email: 'Kevin@Kevin.com',
+    title: 'Project',
     synopsis:
       "Explore the project and fund it to your liking",
     date: new Date(Date.now()),
