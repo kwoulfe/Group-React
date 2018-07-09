@@ -87,8 +87,6 @@ class Home extends Component {
                   githubLink={users.githubLink}
                   name={users.name}
                   email={users.email}
-                  title={users.title}
-                  synopsis={users.synopsis}
                 >
 
                   < div className="image-flip" ontouchstart="this.classList.toggle('hover');" >
@@ -96,7 +94,7 @@ class Home extends Component {
                       <div className="frontside">
                         <div className="card">
                           <div className="card-body text-center">
-                            <p><img className=" img-fluid" src={users.image} /></p>
+                            <p><img className=" img-fluid" src={users.image1} /></p>
                             <h4 className="card-title">{users.name}</h4>
                             <p className="card-text">View the project and fund it your liking.</p>
                             <a href="#" className="btn btn-primary btn-sm"><i className="fa fa-plus"></i></a>
@@ -106,12 +104,12 @@ class Home extends Component {
                       <div className="backside">
                         <div className="card">
                           <div className="card-body text-center mt-4">
-                            <h4 className="card-title">{users.title}</h4>
+                            <h4 className="card-title">{users.projectName}</h4>
                             <p className="card-text">{users.synopsis}</p>
                             <ul className="list-inline">
 
                               <li className="list-inline-item">
-                                <a href="http://www.github.com" target="blank" className="btn btn-primary btn-sm"><i className="fa fa-github"></i></a>
+                                <a href={users.githubLink} target="blank" className="btn btn-primary btn-sm"><i className="fa fa-github"></i></a>
                               </li>
                               <li className="list-inline-item">
 
@@ -136,7 +134,6 @@ class Home extends Component {
       </ div>
 
 
-      </div>
     );
   }
 }
