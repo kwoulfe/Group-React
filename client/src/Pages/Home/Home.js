@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Home.css';
 // import Navbar from '../../Components/NavBar';
 import Cards from '../../Components/Cards';
+
 import API from '../utils/API';
 import { Link } from 'react-router-dom';
 // import Carousel from ".././Components/Carousel";
@@ -63,10 +64,11 @@ class Home extends Component {
     return (
       <div className="App">
         <Jumbotron />
-        <h3>
-          MARKETPLACE
-        </h3>
-
+        <div className="container">
+          <h2>
+            MARKETPLACE
+        </h2>
+        </div>
         {/* } // Map over this.state.friends and render a FriendCard component for each friend object
         {/* <Container> */}
         {/* <div className="container"> commented out container to expand cards, make them bigger for the moment*/}
@@ -74,7 +76,8 @@ class Home extends Component {
 
           <div className="row">
             {this.state.users.map(users => (
-              <div className="col-md-3">
+
+              <div className="col-md-4">
                 <Cards
                   id={users.id}
                   key={users.id}
@@ -84,16 +87,18 @@ class Home extends Component {
                   githubLink={users.githubLink}
                   name={users.name}
                   email={users.email}
+                  title={users.title}
+                  synopsis={users.synopsis}
                 >
+
                   < div className="image-flip" ontouchstart="this.classList.toggle('hover');" >
                     <div className="mainflip">
                       <div className="frontside">
                         <div className="card">
                           <div className="card-body text-center">
-                            <p><img className=" img-fluid" src={users.image1} /></p>
-                            <h3 className="card-title">{users.projectName}</h3>
+                            <p><img className=" img-fluid" src={users.image} /></p>
                             <h4 className="card-title">{users.name}</h4>
-                            <p className="card-text"></p>
+                            <p className="card-text">View the project and fund it your liking.</p>
                             <a href="#" className="btn btn-primary btn-sm"><i className="fa fa-plus"></i></a>
                           </div>
                         </div>
@@ -101,12 +106,12 @@ class Home extends Component {
                       <div className="backside">
                         <div className="card">
                           <div className="card-body text-center mt-4">
-                            <h4 className="card-title">{users.projectName}</h4>
+                            <h4 className="card-title">{users.title}</h4>
                             <p className="card-text">{users.synopsis}</p>
                             <ul className="list-inline">
 
                               <li className="list-inline-item">
-                                <a href={users.githubLink} target="blank" className="btn btn-primary btn-sm"><i className="fa fa-github"></i></a>
+                                <a href="http://www.github.com" target="blank" className="btn btn-primary btn-sm"><i className="fa fa-github"></i></a>
                               </li>
                               <li className="list-inline-item">
 
@@ -123,12 +128,15 @@ class Home extends Component {
                   </div >
                 </Cards>
               </div>
+
             ))}
           </div>
         </ div>
         {/* </ div> */}
       </ div>
 
+
+      </div>
     );
   }
 }

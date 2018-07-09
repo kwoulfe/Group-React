@@ -13,6 +13,7 @@ const userSeed = [
     password: "12345",
     projectName: "the Ifra Project",
     githubLink: "https://github.com/",
+
     synopsis:
       "Explore the project and fund it to your liking",
     image1: 'https://picsum.photos/200/300/?image=1081',
@@ -57,6 +58,7 @@ const userSeed = [
     reasonForDonation: "I'd like to update my current brick and motar store to allow more guests to assist.",
     donationUsedFor: "I need it to apply an addition and necessary updates to expand the amount of people I can help.",
     date: new Date(Date.now()),
+
   },
   {
     name: 'Kevin',

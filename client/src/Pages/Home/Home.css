@@ -2,10 +2,7 @@ body{
   font-family: 'Encode Sans','Fira Sans Extra', sans-serif;
 }
 
-.image-size {
-    height: 400px;
-    width: 350px;
-}
+
 
 h2{
   font-family: 'Encode Sans','Fira Sans Extra', sans-serif;
@@ -155,8 +152,10 @@ section .section-title {
 
 .frontside .card,
 .backside .card {
+
     /* changed to give them all the same height */
     height: 350px;
+
 }
 
 .backside .card a {
@@ -174,3 +173,4 @@ section .section-title {
     height: 120px;
     border-radius: 50%;
 }
+

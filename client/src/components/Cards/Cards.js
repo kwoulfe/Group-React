@@ -6,7 +6,6 @@ const Cards = props => (
     <div className="cardholder">
         {props.children}
     </div>
+);
 
-
-)
 export default Cards;
