@@ -19,7 +19,7 @@ function Navbar(props) {
                 </li>
 
                 <li>
-                    <a className="nav-link justify-content-end" href="/login">Log In</a>
+                    <a className="nav-link justify-content-end" href="/account/signup">Log In</a>
                 </li>
                 <li className="search">
                     <Search />

@@ -17,10 +17,19 @@ import Jumbotron from '../../Components/Jumbotron';
 class Home extends Component {
   state = {
     users: [],
-    name: '',
-    email: '',
-    synopsis: '',
-    image: ''
+    name: "",
+    projectName: '',
+    githubLink: "",
+    email: "",
+    synopsis: "",
+    image1: "",
+    image2: "",
+    image3: "",
+    donationGoal: "",
+    reasonForDonation: '',
+    donationUsedFor: '',
+    donationCurrent: '',
+    donationAdded: ''
   };
 
   componentDidMount() {
@@ -33,10 +42,18 @@ class Home extends Component {
         res =>
           this.setState({
             users: res.data,
-            name: '',
-            email: '',
-            synopsis: '',
-            image: ''
+            name: "",
+            projectName: '',
+            githubLink: "",
+            email: "",
+            synopsis: "",
+            image1: "",
+            image2: "",
+            image3: "",
+            donationGoal: "",
+            reasonForDonation: '',
+            donationUsedFor: '',
+            donationCurrent: '',
           })
         // console.log(users);
       )
@@ -54,7 +71,9 @@ class Home extends Component {
         </div>
         {/* } // Map over this.state.friends and render a FriendCard component for each friend object
         {/* <Container> */}
+        {/* <div className="container"> commented out container to expand cards, make them bigger for the moment*/}
         <div className="container">
+
           <div className="row">
             {this.state.users.map(users => (
 
@@ -62,7 +81,10 @@ class Home extends Component {
                 <Cards
                   id={users.id}
                   key={users.id}
-                  image={users.image}
+                  image1={users.image1}
+                  projectName={users.projectName}
+                  synopsis={users.synopsis}
+                  githubLink={users.githubLink}
                   name={users.name}
                   email={users.email}
                   title={users.title}
@@ -108,8 +130,11 @@ class Home extends Component {
               </div>
 
             ))}
-          </ div>
+          </div>
         </ div>
+        {/* </ div> */}
+      </ div>
+
 
       </div>
     );

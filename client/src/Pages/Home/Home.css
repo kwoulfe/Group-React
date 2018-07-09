@@ -3,6 +3,7 @@ body{
 }
 
 
+
 h2{
   font-family: 'Encode Sans','Fira Sans Extra', sans-serif;
   font-size: 35px;
@@ -151,7 +152,10 @@ section .section-title {
 
 .frontside .card,
 .backside .card {
-    min-height: 312px;
+
+    /* changed to give them all the same height */
+    height: 350px;
+
 }
 
 .backside .card a {

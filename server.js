@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 const PORT = process.env.PORT || 3001;
 const app = express();
+// const config = require("./config/config");
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,7 +19,8 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(routes);
 
-// Connect to the Mongo DB
+// Connect to the Mongo DB 
+// config.db_dev || added this to try to get sign-in and signup to work
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/projectinfo'
 );

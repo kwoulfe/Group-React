@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import Navbar from '../../Components/NavBar';
 // import Cards from '../../Components/Cards';
 // import Footer from '../../Components/Footer';
@@ -12,10 +12,18 @@ import { Link } from "react-router-dom";
 class Project extends React.Component {
   state = {
     users: {},
-    name: '',
-    email: '',
-    synopsis: '',
-    image: ''
+    name: "",
+    projectName: '',
+    githubLink: "",
+    email: "",
+    synopsis: "",
+    image1: "",
+    image2: "",
+    image3: "",
+    donationGoal: "",
+    reasonForDonation: '',
+    donationUsedFor: '',
+    donationCurrent: '',
   };
 
   componentDidMount() {
@@ -31,10 +39,19 @@ class Project extends React.Component {
       .then(res =>
         this.setState({
           users: res.data,
-          name: '',
-          email: '',
-          synopsis: '',
-          image: ''
+          name: "",
+          projectName: '',
+          githubLink: "",
+          email: "",
+          synopsis: "",
+          image1: "",
+          image2: "",
+          image3: "",
+          donationGoal: "",
+          reasonForDonation: '',
+          donationUsedFor: '',
+          donationCurrent: '',
+          donationAdded: ''
         })
       )
 
@@ -57,16 +74,16 @@ class Project extends React.Component {
                     <div className="carousel-item active ">
                       <img
                         className="d-block w-100"
-                        src={this.state.users.image}
-                        alt={this.state.users.name}
+                        src={this.state.users.image1}
+                        alt={this.state.users.projectName}
                       />
                     </div>
                     <div className="carousel-item">
                       <div className="carousel-item active ">
                         <img
                           className="d-block w-100"
-                          src={this.state.users.image}
-                          alt={this.state.users.name}
+                          src={this.state.users.image2}
+                          alt={this.state.users.projectName}
                         />
                       </div>
                     </div>
@@ -74,8 +91,8 @@ class Project extends React.Component {
                       <div className="carousel-item active ">
                         <img
                           className="d-block w-100"
-                          src={this.state.users.image}
-                          alt={this.state.users.name}
+                          src={this.state.users.image3}
+                          alt={this.state.users.projectName}
                         />
                       </div>
                     </div>
@@ -110,8 +127,20 @@ class Project extends React.Component {
                 </h1>
                 <h2>
                   <strong>{this.state.users.email}</strong>
+                  <strong>github: {this.state.users.githubLink}</strong>
+                </h2>
+                <h2>
+                  <strong>Donation Goal: ${this.state.users.donationGoal}</strong>
+                </h2>
+                <h2>
+                  <strong>Current Donation Level: ${this.state.users.donationCurrent}</strong>
+                </h2>
+                <h2>
+                  <strong>Current Donation Level: ${this.state.users.reasonForDonation}</strong>
+                  <strong>Current Donation Level: ${this.state.users.donationUsedFor}</strong>
                 </h2>
                 <h1 className="h1-reponsive mb-3 font">
+                  <strong>{this.state.users.projectName}</strong>
                   <strong>Project details here: {this.state.users.synopsis}</strong>
                 </h1>
                 <Link to={"/donate/" + this.state.users._id}>
