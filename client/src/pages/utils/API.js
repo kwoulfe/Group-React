@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export default {
 
+  // User API's
   getUsers: function () {
     return axios.get('/api/users');
   },
@@ -14,6 +15,15 @@ export default {
   },
   newUser: function (data) {
     return axios.post("/api/users/", data)
+  },
+
+  // Comment API's
+  createPost: function (data) {
+    return axios.post("/api/commets/", data)
+  },
+
+  getPosts: function () {
+    return axios.get('/api/comments');
   }
 
 };

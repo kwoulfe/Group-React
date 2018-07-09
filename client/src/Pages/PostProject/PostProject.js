@@ -17,60 +17,92 @@ class PostProject extends React.Component {
     donationGoal: "",
     reasonForDonation: '',
     donationUsedFor: '',
-    donationCurrent: 0,
+    donationCurrent: '',
   };
 
   componentDidMount() {
     // console.log("~~~~compoenet mounted~~~~")
   }
 
-  // createUser = () => { // recieve user id as parameter
-  //   // console.log("~~~~getuser CLIENT was called~~~~")
+  handleNameChange = (event) => {
+    this.setState({ name: event.target.value });
+  }
 
-  //   API.newUser(res)
-  //     .then(res => this.setState({ users: res.data, name: "", email: "", synopsis: "", image: "", donationGoal: "", donationCurrent: "" }))
+  handleGithubLinkChange = (event) => {
+    this.setState({ githubLink: event.target.value });
+  }
 
-  //     .catch(err => console.log(err));
+  handleEmailChange = (event) => {
+    this.setState({ email: event.target.value });
+  }
 
-  // };
+  handleProjectNameChange = (event) => {
+    this.setState({ projectName: event.target.value });
+  }
 
+  handleSynopsisChange = (event) => {
+    this.setState({ synopsis: event.target.value });
+  }
 
-  handleInputChange = event => {
-    const { name, githubLink, email, synopsis, image1, image2, image3, donationGoal, projectName, reasonForDonation, donationUsedFor, value } = event.target;
-    this.setState({
-      [name]: value,
-      [githubLink]: value,
-      [email]: value,
-      [projectName]: value,
-      [synopsis]: value,
-      [image1]: value,
-      [image2]: value,
-      [image3]: value,
-      [donationGoal]: value,
-      [reasonForDonation]: value,
-      [donationUsedFor]: value
-    });
-  };
+  handleImage1Change = (event) => {
+    this.setState({ image1: event.target.value });
+  }
+
+  handleImage2Change = (event) => {
+    this.setState({ image2: event.target.value });
+  }
+
+  handleImage3Change = (event) => {
+    this.setState({ image3: event.target.value });
+  }
+
+  handleDonationGoalChange = (event) => {
+    this.setState({ donationGoal: event.target.value });
+  }
+  handleReasonForDonationChange = (event) => {
+    this.setState({ reasonForDonation: event.target.value });
+  }
+  handleDonationUsedForChange = (event) => {
+    this.setState({ donationUsedFor: event.target.value });
+  }
+
 
   handleFormSubmit = event => {
     event.preventDefault();
 
-    const userInfo = {
-      name: this.state.users.name,
-      githubLink: this.state.users.githubLink,
-      email: this.state.users.email,
-      projectName: this.state.users.projectName,
-      synopsis: this.state.users.synopsis,
-      image1: this.state.users.image1,
-      image2: this.state.users.image2,
-      image3: this.state.users.image3,
-      donationGoal: this.state.users.donationGoal,
-      reasonForDonation: this.state.users.reasonForDonation,
-      donationUsedFor: this.state.users.donationUsedFor
+    let name = this.state.name.trim();
+    let githubLink = this.state.githubLink.trim();
+    let email = this.state.email.trim();
+    let projectName = this.state.projectName.trim();
+    let synopsis = this.state.synopsis.trim();
+    let image1 = this.state.image1.trim();
+    let image2 = this.state.image2.trim();
+    let image3 = this.state.image3.trim();
+    let donationGoal = this.state.donationGoal.trim();
+    let reasonForDonation = this.state.reasonForDonation.trim();
+    let donationUsedFor = this.state.donationUsedFor.trim();
+
+    if (!name || !githubLink || !email || !projectName || !synopsis || !image1 || !image2 || !image3 || !donationGoal || !reasonForDonation || !donationUsedFor) {
+      return alert("Must fill out all fields before proceeding.");
     }
 
-    API.newUser(userInfo)
+    API.newUser({
+
+      name: name,
+      projectName: projectName,
+      githubLink: githubLink,
+      email: email,
+      synopsis: synopsis,
+      image1: image1,
+      image2: image2,
+      image3: image3,
+      donationGoal: donationGoal,
+      reasonForDonation: reasonForDonation,
+      donationUsedFor: donationUsedFor,
+
+    })
       .then(res => {
+        console.log(res);
         console.log(res.data);
       })
       .catch(err => console.log(err));
@@ -112,8 +144,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="text"
-              value={this.state.users.name}
-              onChange={this.handleInputChange}
+              value={this.state.name}
+              onChange={this.handleNameChange}
               id="defaultFormContactNameEx"
               class="form-control"
             />
@@ -125,8 +157,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="email"
-              value={this.state.users.email}
-              onChange={this.handleInputChange}
+              value={this.state.email}
+              onChange={this.handleEmailChange}
               id="defaultFormContactNameEx"
               class="form-control"
             />
@@ -138,8 +170,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="text"
-              value={this.state.users.githubLink}
-              onChange={this.handleInputChange}
+              value={this.state.githubLink}
+              onChange={this.handleGithubLinkChange}
               id="defaultFormContactNameEx"
               class="form-control"
             />
@@ -151,8 +183,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="text"
-              value={this.state.users.image1}
-              onChange={this.handleInputChange}
+              value={this.state.image1}
+              onChange={this.handleImage1Change}
               id="defaultFormContactEmailEx"
               class="form-control"
             />
@@ -164,8 +196,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="text"
-              value={this.state.users.image2}
-              onChange={this.handleInputChange}
+              value={this.state.image2}
+              onChange={this.handleImage2Change}
               id="defaultFormContactEmailEx"
               class="form-control"
             />
@@ -177,8 +209,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="text"
-              value={this.state.users.image3}
-              onChange={this.handleInputChange}
+              value={this.state.image3}
+              onChange={this.handleImage3Change}
               id="defaultFormContactEmailEx"
               class="form-control"
             />
@@ -190,8 +222,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="text"
-              value={this.state.users.projectName}
-              onChange={this.handleInputChange}
+              value={this.state.projectName}
+              onChange={this.handleProjectNameChange}
               id="defaultFormContactNameEx"
               class="form-control"
             />
@@ -203,8 +235,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="text"
-              value={this.state.users.synopsis}
-              onChange={this.handleInputChange}
+              value={this.state.synopsis}
+              onChange={this.handleSynopsisChange}
               id="defaultFormContactNameEx"
               class="form-control"
             />
@@ -216,8 +248,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="number"
-              value={this.state.users.donationGoal}
-              onChange={this.handleInputChange}
+              value={this.state.donationGoal}
+              onChange={this.handleDonationGoalChange}
               id="defaultFormContactNameEx"
               class="form-control"
             />
@@ -229,8 +261,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="text"
-              value={this.state.users.reasonForDonation}
-              onChange={this.handleInputChange}
+              value={this.state.reasonForDonation}
+              onChange={this.handleReasonForDonationChange}
               id="defaultFormContactNameEx"
               class="form-control"
             />
@@ -242,8 +274,8 @@ class PostProject extends React.Component {
           </label>
             <input
               type="text"
-              value={this.state.users.donationUsedFor}
-              onChange={this.handleInputChange}
+              value={this.state.donationUsedFor}
+              onChange={this.handleDonationUsedForChange}
               id="defaultFormContactNameEx"
               class="form-control"
             />
@@ -251,7 +283,7 @@ class PostProject extends React.Component {
             <br />
 
             <div className="text-center mt-4">
-              <button class="btn btn-outline-grey" type="submit">
+              <button class="btn btn-outline-grey" type="submit" value="Post">
                 Submit<i class="fa fa-paper-plane-o ml-2" />
               </button>
             </div>

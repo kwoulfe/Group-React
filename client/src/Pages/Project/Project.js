@@ -3,11 +3,12 @@ import React from 'react';
 // import Cards from '../../Components/Cards';
 // import Footer from '../../Components/Footer';
 // import Carousel from '../../Components/Carousel';
-import Comment from '../../Components/Comment';
 // import cards from '../../cards.json';
 import './Project.css';
 import API from '../utils/API';
 import { Link } from "react-router-dom";
+import CommentWindow from '../../Components/CommentWindow/CommentWindow';
+import CommentForm from '../../Components/CommentForm/CommentForm';
 
 class Project extends React.Component {
   state = {
@@ -150,7 +151,17 @@ class Project extends React.Component {
             </div>
           </div>
         </div>
-        <Comment />
+        {/* Comment area testing */}
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8">
+              <CommentWindow />
+            </div>
+            <div className="col-md-4">
+              <CommentForm />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
