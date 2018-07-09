@@ -24,8 +24,8 @@ class App extends Component {
             <Navbar />
             <Switch>
               <Route path="/" component={Home} exact />
-              <Route path="/login" component={LogIn} />
-              <Route path="/account/signup" component={SignUp} />
+              <Route path="/account/signup" component={LogIn} />
+              {/* <Route path="/account/signup" component={SignUp} /> */}
               <Route path="/users/:id" component={Project} />
               <Route path="/donate/:id" component={Donate} />
               <Route path="/thankyou" component={ThankYou} />
