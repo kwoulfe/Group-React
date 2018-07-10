@@ -145,12 +145,35 @@ class Donate extends React.Component {
                   <div className="text-center mt-4">
 
                     {/* disabled={!(this.state.author && this.state.title)} set requirments for fields */}
-                    <Link to="/thankyou">
-                      <button class="btn btn-outline-warning" type="submit" value="Post"
-                      >
-                        Add Donation<i class="fa fa-paper-plane-o ml-2" />
-                      </button>
-                    </Link>
+
+
+                    <button class="btn btn-outline-warning" type="submit" value="Post" data-toggle="modal" data-target="#exampleModal"
+                    >
+                      Add Donation<i class="fa fa-paper-plane-o ml-2" />
+
+                    </button>
+
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+                      <div class="modal-dialog modal-center" role="document">
+                        <div class="modal-content">
+                          {/* <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div> */}
+                          <div class="modal-body">
+                            Thank you for your donation! please feel free to explore more projects.
+                              </div>
+                          <div class="modal-footer">
+                            <a href="/">
+                              <button type="button" class="btn btn-primary">Home</button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
                   </div>
                 </form>

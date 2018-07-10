@@ -28,7 +28,7 @@ class App extends Component {
               {/* <Route path="/account/signup" component={SignUp} /> */}
               <Route path="/users/:id" component={Project} />
               <Route path="/donate/:id" component={Donate} />
-              <Route path="/thankyou" component={ThankYou} />
+              {/* <Route path="/thankyou" component={ThankYou} /> */}
               <Route path="/post" component={PostProject} />
               <Route component={Error} />
             </Switch>

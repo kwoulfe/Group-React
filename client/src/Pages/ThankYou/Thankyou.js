@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 
 const ThankYou = () => (
   <div>
@@ -11,7 +13,7 @@ const ThankYou = () => (
         <p className="lead font2">Click below to go back to searching!</p>
 
         <a href="/">
-          <button className="btn btn-outline-warning" type="submit">
+          <button className="btn btn-outline-warning" type="submit" value="Post">
             Home<i className="fa fa-paper-plane-o ml-2" />
           </button>
         </a>
