@@ -5,10 +5,39 @@ body{
   .writeup{
       position: relative;
   }
-  h1{
+  .h1-reponsive mb-3 font{
       font-size: 30px;
   }
 
-  p{
+
+  /* p{
       font-size: 20px;
-  }
+      text-align: left;
+  } */
+ 
+/* h2{
+    font-size:15px;
+    text-align: left;
+} */
+
+.email,.gitHub,.donationGoal
+,.donationCurrent,.reasonForDonation
+,.donationUsedFor{
+    font-size:15px;
+    text-align: left;
+}
+
+.projectDetails{
+    font-size:20px;
+    text-align:left;
+}
+
+.carousel-inner{
+    width: 100%;
+    height:480px;
+}
+
+.carousel-inner img{
+    width:100%;
+    height:100%;
+}
