@@ -19,11 +19,11 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(routes);
 
-// Connect to the Mongo DB 
+// require('./routes')(app);
+
+// Connect to the Mongo DB
 // config.db_dev || added this to try to get sign-in and signup to work
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/projectinfo'
-);
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/projectinfo');
 
 // Send every other request to the React app
 // Define any API routes before this runs
