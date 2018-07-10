@@ -100,6 +100,7 @@ class PostProject extends React.Component {
       donationGoal: donationGoal,
       reasonForDonation: reasonForDonation,
       donationUsedFor: donationUsedFor,
+      donationCurrent: 0
 
     })
       .then(res => {
@@ -283,10 +284,11 @@ class PostProject extends React.Component {
 
             <br />
 
-            <div className="text-center mt-4">
-              <button class="btn btn3" type="submit" value="Post" data-toggle="modal" data-target="#exampleModal">
-                <i class="fa fa-paper-plane-o ml-2" />
+            <div className="text-center">
+              <button class="btn btn-outline btn-primary-home2" type="submit" value="Post" data-toggle="modal" data-target="#exampleModal">
+                Submit Project
               </button>
+
             </div>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
@@ -303,7 +305,7 @@ class PostProject extends React.Component {
                               </div>
                   <div class="modal-footer">
                     <a href="/">
-                      <button type="button" class="btn btn-primary">Home</button>
+                      <button type="button" class="btn btn-primary-home2">Home</button>
                     </a>
                   </div>
                 </div>
