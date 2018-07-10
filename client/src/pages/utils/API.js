@@ -17,11 +17,13 @@ export default {
   },
 
   // Comment API's
-  createPost: function(data) {
-    return axios.post('/api/commets/', data);
+
+  createPost: function (data) {
+    return axios.post("/api/comments/", data)
   },
 
-  getPosts: function() {
-    return axios.get('/api/comments');
+  getPosts: function (projectId) {
+    return axios.get(`/api/comments/${projectId}`);
+
   }
 };

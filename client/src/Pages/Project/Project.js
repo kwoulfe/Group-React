@@ -13,23 +13,13 @@ import CommentForm from '../../Components/CommentForm/CommentForm';
 class Project extends React.Component {
   state = {
     users: {},
-    name: "",
-    projectName: '',
-    githubLink: "",
-    email: "",
-    synopsis: "",
-    image1: "",
-    image2: "",
-    image3: "",
-    donationGoal: "",
-    reasonForDonation: '',
-    donationUsedFor: '',
-    donationCurrent: '',
+    comments: []
   };
 
   componentDidMount() {
     // console.log("~~~~compoenet mounted~~~~")
     this.getUser(); // match.params.user to get the id
+    this.loadPosts();
   }
 
   getUser = () => {
@@ -40,24 +30,41 @@ class Project extends React.Component {
       .then(res =>
         this.setState({
           users: res.data,
-          name: "",
-          projectName: '',
-          githubLink: "",
-          email: "",
-          synopsis: "",
-          image1: "",
-          image2: "",
-          image3: "",
-          donationGoal: "",
-          reasonForDonation: '',
-          donationUsedFor: '',
-          donationCurrent: '',
-          donationAdded: ''
+
         })
       )
 
       .catch(err => console.log(err));
   };
+
+  handleCommentSubmit = (author, text) => {
+    if (!text || !author) {
+      return alert("Must include both a comment and an anonymous username in order to post!");
+    }
+    API.createPost({ author, text, projectId: this.props.match.params.id })
+      .then(res => {
+        this.loadPosts();
+
+      })
+      .catch(err => console.log(err));;
+
+    this.setState({ author: '', text: '' });
+  };
+
+  loadPosts = () => {
+    API.getPosts(this.props.match.params.id)
+      .then(
+        res =>
+          this.setState({
+            comments: res.data
+
+          })
+        // console.log(comments);
+      )
+
+      .catch(err => console.log(err));
+  };
+
   render() {
     return (
       <div>
@@ -155,10 +162,10 @@ class Project extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8">
-              <CommentWindow />
+              <CommentWindow comments={this.state.comments} />
             </div>
             <div className="col-md-4">
-              <CommentForm />
+              <CommentForm projectId={this.props.match.params.id} handleSubmit={this.handleCommentSubmit} />
             </div>
           </div>
         </div>

@@ -5,39 +5,12 @@ import API from '../../Pages/utils/API';
 
 class CommentWindow extends React.Component {
 
-    state = {
-        comment: [],
-        author: "",
-        text: '',
-        date: ''
-    };
-
-    componentDidMount() {
-        this.loadPosts();
-    }
-
-    loadPosts = () => {
-        API.getPosts()
-            .then(
-                res =>
-                    this.setState({
-                        comments: res.data,
-                        author: "",
-                        text: '',
-                        date: ''
-                    })
-                // console.log(comments);
-            )
-
-            .catch(err => console.log(err));
-    };
-
     render = () => {
         return (
 
             <div className="container">
                 <h1>Comments</h1>
-                {this.state.comment.map(comment => (
+                {this.props.comments.map(comment => (
                     <div className="commentBox"
                         id={comment.id}
                         key={comment.id}
