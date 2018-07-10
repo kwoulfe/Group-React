@@ -137,8 +137,8 @@ class Project extends React.Component {
                   <strong>Current Donation Level: ${this.state.users.donationCurrent}</strong>
                 </h2>
                 <h2>
-                  <strong>Current Donation Level: ${this.state.users.reasonForDonation}</strong>
-                  <strong>Current Donation Level: ${this.state.users.donationUsedFor}</strong>
+                  <strong>Reason Donation Requested: {this.state.users.reasonForDonation}</strong>
+                  <strong>What Donation will be used for: {this.state.users.donationUsedFor}</strong>
                 </h2>
                 <h1 className="h1-reponsive mb-3 font">
                   <strong>{this.state.users.projectName}</strong>

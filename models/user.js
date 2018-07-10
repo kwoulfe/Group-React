@@ -2,19 +2,19 @@ const mongoose = require('mongoose');
 const bcrypt = require("bcryptjs");
 
 const userSchema = new mongoose.Schema({
-  name: { type: String, default: '', required: true },
-  email: { type: String, default: '', required: true },
-  password: { type: String, default: '', required: true },
-  projectName: { type: String, default: '', required: true },
-  githubLink: { type: String, default: '', required: true },
-  synopsis: { type: String, default: '', required: true },
-  image1: { type: String, default: '', required: true },
-  image2: { type: String, default: '', required: true },
-  image3: { type: String, default: '', required: true },
-  donationGoal: { type: [Number], default: '', required: true },
-  reasonForDonation: { type: String, default: '', required: true },
-  donationUsedFor: { type: String, default: '', required: true },
-  donationCurrent: { type: [Number], default: '', required: true },
+  name: { type: String, default: '' },
+  email: { type: String, default: '' },
+  password: { type: String, default: '' },
+  projectName: { type: String, default: '' },
+  githubLink: { type: String, default: '' },
+  synopsis: { type: String, default: '' },
+  image1: { type: String, default: '' },
+  image2: { type: String, default: '' },
+  image3: { type: String, default: '' },
+  donationGoal: { type: [Number], default: '' },
+  reasonForDonation: { type: String, default: '' },
+  donationUsedFor: { type: String, default: '' },
+  donationCurrent: { type: [Number], default: '' },
   date: { type: Date, default: Date.now() }
 });
 
