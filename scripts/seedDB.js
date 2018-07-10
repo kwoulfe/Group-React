@@ -34,7 +34,7 @@ const userSeed = [
     synopsis:
       "A project that will hopefully work",
     image1: 'https://picsum.photos/200/300/?image=1020',
-    image2: "https://picsum.photos/200/300/?image=587",
+    image2: "https://picsum.photos/200/300/?image=109",
     image3: 'https://picsum.photos/200/300/?image=900',
     donationGoal: 2000,
     donationCurrent: 0,
