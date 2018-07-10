@@ -42,7 +42,7 @@ class Donate extends React.Component {
 
   };
 
-
+  // Put on Post project page to simplify post route code
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
