@@ -147,9 +147,9 @@ class Donate extends React.Component {
                     {/* disabled={!(this.state.author && this.state.title)} set requirments for fields */}
 
 
-                    <button class="btn btn-outline-warning" type="submit" value="Post" data-toggle="modal" data-target="#exampleModal"
+                    <button class="btn btn-outline btn-primary-post" type="submit" value="Post" data-toggle="modal" data-target="#exampleModal"
                     >
-                      Add Donation<i class="fa fa-paper-plane-o ml-2" />
+                      Add Donation
 
                     </button>
 
@@ -168,7 +168,7 @@ class Donate extends React.Component {
                               </div>
                           <div class="modal-footer">
                             <a href="/">
-                              <button type="button" class="btn btn-primary">Home</button>
+                              <button type="button" class="btn btn-primary-home">Home</button>
                             </a>
                           </div>
                         </div>
