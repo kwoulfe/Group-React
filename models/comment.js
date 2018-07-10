@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-    author: { type: String, default: '', required: true },
-    text: { type: String, default: '', required: true },
+    author: { type: String, default: '' },
+    text: { type: String, default: '' },
     timeStamp: { type: Date, default: Date.now() },
     isDeleted: { type: Boolean, default: false }
 });
