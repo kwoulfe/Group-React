@@ -8,11 +8,12 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     findById: function (req, res) {
-        db.comment.findById(req.params.id)
+        db.comment.find({ projectId: req.params.projectId })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
+        console.log("hit create comment")
         db.comment.create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
