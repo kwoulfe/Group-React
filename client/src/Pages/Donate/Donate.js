@@ -90,37 +90,35 @@ class Donate extends React.Component {
           <div className="row">
             <div className="col-md-12">
               <h1 className="h1-reponsive mb-3 font">
-                <br />
-                <strong>Fund this Project:</strong>
+                <strong>Donate to this Project:</strong>
               </h1>
 
               <div className="row">
-                <h3 className="h1-reponsive mb-3 font">
+                <h1 className="h1-reponsive mb-3 font">
                   <strong>{this.state.users.name}</strong>
-                </h3>
-                <br />
+                </h1>
                 <p className="h1-reponsive mb-3 font">
-                  <strong>Project Name Small Summary: </strong>{this.state.users.synopsis}
+                  <strong>Project Name Small Summary: {this.state.users.synopsis}</strong>
                 </p>
 
                 <div className="row col-md-3">
-                  <p><strong>Donation Goal:</strong> {this.state.users.donationGoal}</p>
+                  <p>Donation Goal: {this.state.users.donationGoal}</p>
                 </div>
                 <div className="col-md-3">
-                  <p><strong>Current Donation Level: </strong>{this.state.users.donationCurrent}</p>
+                  <p>Current Donation Level: {this.state.users.donationCurrent}</p>
                 </div>
 
                 <div className="col-md-3">
-                  <p><strong>Reason wanting donation: </strong>{this.state.users.reasonForDonation}</p>
+                  <p>Reason wanting donation: {this.state.users.reasonForDonation}</p>
                 </div>
                 <div className="col-md-3">
-                  <p><strong>Donation used for: </strong>{this.state.users.donationUsedFor}</p>
+                  <p>Donation used for: {this.state.users.donationUsedFor}</p>
                 </div>
 
                 <form onSubmit={this.handleFormSubmit}>
                   <label htmlFor="defaultFormContactNameEx" class="grey-text">
                     Amount
-                  </label>
+                </label>
                   <input
                     type="number"
                     name="donationAdded"
@@ -134,7 +132,7 @@ class Donate extends React.Component {
 
                   <label htmlFor="defaultFormContactEmailEx" class="grey-text">
                     Paypal or CC #
-                  </label>
+                </label>
                   <input
                     type="text"
                     name="text"
@@ -147,12 +145,12 @@ class Donate extends React.Component {
                   <div className="text-center mt-4">
 
                     {/* disabled={!(this.state.author && this.state.title)} set requirments for fields */}
-                    <button class="btn btn-primary-post" type="submit" value="Post"
-                    >
-                      {/* <Link to="/thankyou"> */}
-                      Fund
-                      {/* </Link> */}
-                    </button>
+                    <Link to="/thankyou">
+                      <button class="btn btn-outline-warning" type="submit" value="Post"
+                      >
+                        Add Donation<i class="fa fa-paper-plane-o ml-2" />
+                      </button>
+                    </Link>
 
                   </div>
                 </form>
