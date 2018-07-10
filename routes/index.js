@@ -11,3 +11,8 @@ router.use(function(req, res) {
 });
 
 module.exports = router;
+
+// const fs = require('fs');
+// const path = require('path');
+
+// module.exports = app => require('./api/signin')(app);

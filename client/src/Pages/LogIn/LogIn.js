@@ -105,13 +105,13 @@ class LogIn extends React.Component {
         password: signUpPassword
       })
     })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        } else {
-          err => console.log(err);
-        }
-      })
+      // .then(res => {
+      //   if (res.ok) {
+      //     return res.json();
+      //   } else {
+      //     err => console.log(err);
+      //   }
+      // })
       .then(json => {
         console.log('json', json);
         if (json.success) {
