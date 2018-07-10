@@ -39,7 +39,7 @@ nav {
 
   
   .nav-link:hover {
-    font-style: initial;
+    /* font-style: initial; */
     font-style:'Encode Sans bold',bold; 
     color:#21f4d1;
   }
