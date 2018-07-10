@@ -284,7 +284,7 @@ class PostProject extends React.Component {
             <br />
 
             <div className="text-center mt-4">
-              <button class="btn btn-primary-post" type="submit" value="Post">
+              <button class="btn btn3" type="submit" value="Post">
                 <i class="fa fa-paper-plane-o ml-2" />
               </button>
             </div>
