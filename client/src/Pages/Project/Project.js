@@ -130,34 +130,37 @@ class Project extends React.Component {
                     </a>
                   </div>
                 </div>
-                <h1 className="name">
-                  <strong>{this.state.users.name}</strong>
-                </h1>
-                <h2 className="email">
-                  <strong>{this.state.users.email}</strong>
-                </h2>
-                <h2 className="gitHub">
-                  <strong>Github: {this.state.users.githubLink}</strong>
-                </h2>
-                <h2 className="donationGoal">
-                  <strong>Donation Goal: ${this.state.users.donationGoal}</strong>
-                </h2>
-                <h2 className="donationCurrent">
-                  <strong>Current Donation Level: ${this.state.users.donationCurrent}</strong>
-                </h2>
-                <h2 className="reasonForDonation">
-                  <strong>Reason Donation Requested: {this.state.users.reasonForDonation}</strong>
-                </h2>
-                <h2 className="donationUsedFor">
-                  <strong>What Donation will be used for: {this.state.users.donationUsedFor}</strong>
-                </h2>
-                <h1 className="projectDetails">
-                  {/* <strong>{this.state.users.projectName}</strong> */}
-                  <strong>Project details here: {this.state.users.synopsis}</strong>
-                </h1>
-                <Link to={"/donate/" + this.state.users._id}>
-                  <button className="btn btn-primary btn-md butt">Donate</button>
-                </Link>
+                <div className="container-fluid">
+                  <h1 className="name">
+                    <strong>{this.state.users.name}</strong>
+                  </h1>
+
+                  <h2 className="donationGoal">
+                    <strong>Donation Goal:</strong> {this.state.users.donationGoal}
+                  </h2>
+                  <h2 className="donationCurrent">
+                    <strong>Current Donation Level: </strong>{this.state.users.donationCurrent}
+                  </h2>
+                  <h2 className="reasonForDonation">
+                    <strong>Reason Donation Requested:</strong> {this.state.users.reasonForDonation}
+                  </h2>
+                  <h2 className="donationUsedFor">
+                    <strong>What Donation will be used for: </strong>{this.state.users.donationUsedFor}
+                  </h2>
+                  <h2 className="email">
+                    {this.state.users.email}
+                  </h2>
+                  <h2 className="gitHub">
+                    <strong>Github:</strong> {this.state.users.githubLink}
+                  </h2>
+                  <h1 className="projectDetails">
+                    {/* <strong>{this.state.users.projectName}</strong> */}
+                    <strong>Project details here:</strong> {this.state.users.synopsis}
+                  </h1>
+                  <Link to={"/donate/" + this.state.users._id}>
+                    <button className="btn btn-primary btn-md butt">Donate</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

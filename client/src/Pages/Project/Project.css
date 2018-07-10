@@ -7,7 +7,8 @@ body{
   }
   .name{
       font-size: 30px;
-      color:#00d8e7;
+      color:#706e6e;
+      margin: 5px;
 
   }
 .donationBtn{
