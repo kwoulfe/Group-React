@@ -2,9 +2,9 @@ body{
     font-family: 'Encode Sans','Fira Sans Extra', sans-serif;
     color:#706e6e;
   }
-  .writeup{
+  /* .writeup{
       position: relative;
-  }
+  } */
   .name{
       font-size: 30px;
       color:#706e6e;
@@ -15,7 +15,12 @@ body{
         width:120px;
         margin-right: 100px;
        background-color:#00d8e7;
+       float: left;
 
+}
+.container-fluid{
+float: left;
+margin:5px;
 }
 
   /* p{

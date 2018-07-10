@@ -90,29 +90,31 @@ class Donate extends React.Component {
           <div className="row">
             <div className="col-md-12">
               <h1 className="h1-reponsive mb-3 font">
-                <strong>Donate to this Project:</strong>
+                <br />
+                <strong>Fund this Project:</strong>
               </h1>
 
               <div className="row">
-                <h1 className="h1-reponsive mb-3 font">
+                <h3 className="h1-reponsive mb-3 font">
                   <strong>{this.state.users.name}</strong>
-                </h1>
+                </h3>
+                <br />
                 <p className="h1-reponsive mb-3 font">
-                  <strong>Project Name Small Summary: {this.state.users.synopsis}</strong>
+                  <strong>Project Name Small Summary: </strong>{this.state.users.synopsis}
                 </p>
 
                 <div className="row col-md-3">
-                  <p>Donation Goal: {this.state.users.donationGoal}</p>
+                  <p><strong>Donation Goal:</strong> {this.state.users.donationGoal}</p>
                 </div>
                 <div className="col-md-3">
-                  <p>Current Donation Level: {this.state.users.donationCurrent}</p>
+                  <p><strong>Current Donation Level: </strong>{this.state.users.donationCurrent}</p>
                 </div>
 
                 <div className="col-md-3">
-                  <p>Reason wanting donation: {this.state.users.reasonForDonation}</p>
+                  <p><strong>Reason wanting donation: </strong>{this.state.users.reasonForDonation}</p>
                 </div>
                 <div className="col-md-3">
-                  <p>Donation used for: {this.state.users.donationUsedFor}</p>
+                  <p><strong>Donation used for: </strong>{this.state.users.donationUsedFor}</p>
                 </div>
 
                 <form onSubmit={this.handleFormSubmit}>
@@ -145,10 +147,10 @@ class Donate extends React.Component {
                   <div className="text-center mt-4">
 
                     {/* disabled={!(this.state.author && this.state.title)} set requirments for fields */}
-                    <button class="btn btn-outline-warning" type="submit" value="Post"
+                    <button class="btn btn-primary-post" type="submit" value="Post"
                     >
                       {/* <Link to="/thankyou"> */}
-                      Add Donation<i class="fa fa-paper-plane-o ml-2" />
+                      Fund
                       {/* </Link> */}
                     </button>
 

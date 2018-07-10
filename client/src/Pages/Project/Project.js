@@ -153,12 +153,12 @@ class Project extends React.Component {
                   <h2 className="gitHub">
                     <strong>Github:</strong> {this.state.users.githubLink}
                   </h2>
-                  <h1 className="projectDetails">
+                  <h2 className="projectDetails">
                     {/* <strong>{this.state.users.projectName}</strong> */}
                     <strong>Project details here:</strong> {this.state.users.synopsis}
-                  </h1>
+                  </h2>
                   <Link to={"/donate/" + this.state.users._id}>
-                    <button className="btn btn-primary btn-md butt">Donate</button>
+                    <button className="btn btn-primary btn-md butt">Fund</button>
                   </Link>
                 </div>
               </div>
