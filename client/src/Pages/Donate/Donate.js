@@ -20,8 +20,10 @@ class Donate extends React.Component {
     reasonForDonation: '',
     donationUsedFor: '',
     donationCurrent: '',
-    donationAdded: ''
+    donationAdded: 0,
+    text: ''
   };
+
 
   componentDidMount() {
     // console.log("~~~~compoenet mounted~~~~")
@@ -32,7 +34,9 @@ class Donate extends React.Component {
     // console.log("~~~~getuser CLIENT was called~~~~")
 
     API.getUser(this.props.match.params.id)
-      .then(res => this.setState({ users: res.data, name: "", email: "", synopsis: "", image: "", donationGoal: "", donationCurrent: "" }))
+      .then(res => this.setState({
+        users: res.data
+      }))
 
       .catch(err => console.log(err));
 
@@ -40,33 +44,42 @@ class Donate extends React.Component {
 
 
   handleInputChange = event => {
-    const { donationAdded, value } = event.target;
+    const { name, value } = event.target;
     this.setState({
-      [donationAdded]: value
+      [name]: value
     });
   };
+
 
   handleFormSubmit = event => {
     event.preventDefault();
-    // looking for donation added variable
+    // Do this later for text
+    // let text = this.setState.text.trim();
+    // let donationAdded = this.donationAdded.trim();
+    let donationAdded = (parseInt(this.state.users.donationCurrent) + parseInt(this.state.donationAdded));
+    if (!donationAdded) {
+      return alert("No donation recognized in the form! Please enter a numerical donation.");
+    }
+    API.updateDonation(this.props.match.params.id, { donationCurrent: donationAdded })
+      .then(res => this.setState({
+        users: res.data
+      }))
+      .catch(err => console.log(err))
 
-    const add = parseInt({
-      donationAdded: this.state.donationAdded
-    });
-
-    API.updateDonation({
-      id: this.props.match.params.id,
-      data: {
-        donationCurrent: add + this.state.users.donationCurrent
-      }
-    })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
-      .catch(err => console.log(err));
-
+    this.setState({ donationAdded: '', text: '' });
   };
+
+  // API.updateDonation({
+  //   id: this.props.match.params.id,
+  //   data: {
+  //     donationCurrent: add + this.state.users.donationCurrent
+  //   }
+  // })
+  //   .then(res => {
+  //     console.log(res);
+  //     console.log(res.data);
+  //   })
+  //   .catch(err => console.log(err));
 
 
   render() {
@@ -107,8 +120,9 @@ class Donate extends React.Component {
                     Amount
                   </label>
                   <input
-                    type="text"
-                    value={this.donationAdded}
+                    type="number"
+                    name="donationAdded"
+                    value={this.state.donationAdded}
                     onChange={this.handleInputChange}
                     id="defaultFormContactNameEx"
                     className="form-control"
@@ -121,6 +135,9 @@ class Donate extends React.Component {
                   </label>
                   <input
                     type="text"
+                    name="text"
+                    value={this.state.text}
+                    onChange={this.handleInputChange}
                     id="defaultFormContactEmailEx"
                     className="form-control"
                   />
@@ -128,7 +145,7 @@ class Donate extends React.Component {
                   <div className="text-center mt-4">
 
                     {/* disabled={!(this.state.author && this.state.title)} set requirments for fields */}
-                    <button class="btn btn-outline-warning" type="submit"
+                    <button class="btn btn-outline-warning" type="submit" value="Post"
                     >
                       {/* <Link to="/thankyou"> */}
                       Add Donation<i class="fa fa-paper-plane-o ml-2" />

@@ -52,7 +52,7 @@ class CommentWindow extends React.Component {
                             <h4>{comment.text}</h4>
                         </div>
                     </div>
-                ))};
+                ))}
             </div>
 
         )

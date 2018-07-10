@@ -123,33 +123,27 @@ class Project extends React.Component {
                     </a>
                   </div>
                 </div>
-                <div className="projectContent">
-                  <h1 className="h1-reponsive mb-3 font">
-                    <strong>{this.state.users.name}</strong>
-                  </h1>
-                  <h2 className="email">
-                    <strong>{this.state.users.email}</strong>
-                  </h2>
-                  <h2 className="gitHub">
-                    <strong>GitHub: {this.state.users.githubLink}</strong>
-                  </h2>
-                  <h2 className="donationGoal">
-                    <strong>Donation Goal: {this.state.users.donationGoal}</strong>
-                  </h2>
-                  <h2 className="donationCurrent">
-                    <strong>Current Donation Level: {this.state.users.donationCurrent}</strong>
-                  </h2>
-                  <h2 className="reasonForDonation">
-                    <strong>Current Donation Level: {this.state.users.reasonForDonation}</strong>
-                  </h2>
-                  <h2 className="donationUsedFor">
-                    <strong>Current Donation Level: {this.state.users.donationUsedFor}</strong>
-                  </h2>
-                  <h1 className="projectDetails">
-                    {/* <strong>{this.state.users.projectName}: </strong> */}
-                    <strong>Project details: {this.state.users.synopsis}</strong>
-                  </h1>
-                </div>
+                <h1 className="h1-reponsive mb-3 font">
+                  <strong>{this.state.users.name}</strong>
+                </h1>
+                <h2>
+                  <strong>{this.state.users.email}</strong>
+                  <strong>github: {this.state.users.githubLink}</strong>
+                </h2>
+                <h2>
+                  <strong>Donation Goal: ${this.state.users.donationGoal}</strong>
+                </h2>
+                <h2>
+                  <strong>Current Donation Level: ${this.state.users.donationCurrent}</strong>
+                </h2>
+                <h2>
+                  <strong>Reason Donation Requested: {this.state.users.reasonForDonation}</strong>
+                  <strong>What Donation will be used for: {this.state.users.donationUsedFor}</strong>
+                </h2>
+                <h1 className="h1-reponsive mb-3 font">
+                  <strong>{this.state.users.projectName}</strong>
+                  <strong>Project details here: {this.state.users.synopsis}</strong>
+                </h1>
                 <Link to={"/donate/" + this.state.users._id}>
                   <button>Donate</button>
                 </Link>

@@ -37,10 +37,8 @@ class Search extends Component {
             name="search"
             value={this.state.search}
           />
-
-          <a onClick={this.handleSubmit} type="submit" className="click"> <i class="fa fa-paper-plane-o ml-2" />
+          <a onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-sm"> <i class="fa fa-search ml-2" />
           </a>
-
         </div>
       </form>
     );
