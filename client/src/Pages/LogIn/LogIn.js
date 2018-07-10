@@ -2,7 +2,6 @@ import React from 'react';
 import { setInStorage, getFromStorage } from '../utils/storage';
 import 'whatwg-fetch';
 
-
 class LogIn extends React.Component {
   constructor(props) {
     super(props);
@@ -62,7 +61,6 @@ class LogIn extends React.Component {
     }
   }
 
-
   onTextboxChangeSignInEmail(event) {
     this.setState({
       signInEmail: event.target.value
@@ -108,9 +106,10 @@ class LogIn extends React.Component {
     })
       .then(res => {
         if (res.ok) {
-          return res.json()
+          return res.json();
+        } else {
+          err => console.log(err);
         }
-        else { err => console.log(err) };
       })
       .then(json => {
         console.log('json', json);
@@ -142,7 +141,8 @@ class LogIn extends React.Component {
     fetch('/api/account/signin', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
       },
       body: JSON.stringify({
         email: signInEmail,
@@ -218,7 +218,7 @@ class LogIn extends React.Component {
       return (
         <div className="row">
           <div className="col-md-5" />
-          <div className="col-md-2" >
+          <div className="col-md-2">
             <p>Loading...</p>
           </div>
           <div className="col-md-5" />
@@ -230,17 +230,18 @@ class LogIn extends React.Component {
         <div className="container">
           {/* Sign-up form */}
           <div className="jumbotron text-center">
-
             <h1 className="h1-reponsive mb-3 font">
               <strong>Log-In!</strong>
             </h1>
-            <p className="lead font2">Enter your Account information to sign-in!</p>
+            <p className="lead font2">
+              Enter your Account information to sign-in!
+            </p>
 
             <form>
-              {(signInError) ? (<p>{signInError}</p>) : null}
+              {signInError ? <p>{signInError}</p> : null}
               <label htmlFor="defaultFormContactEmailEx" class="grey-text">
                 Your email
-          </label>
+              </label>
               <input
                 type="email"
                 class="form-control"
@@ -252,7 +253,7 @@ class LogIn extends React.Component {
 
               <label htmlFor="defaultFormContactSubjectEx" class="grey-text">
                 password
-          </label>
+              </label>
               <input
                 type="password"
                 class="form-control"
@@ -263,23 +264,28 @@ class LogIn extends React.Component {
               <br />
 
               <div className="text-center mt-4">
-                <button className="btn btn-outline-grey" type="button" onClick={this.onSignIn}>
+                <button
+                  className="btn btn-outline-grey"
+                  type="button"
+                  onClick={this.onSignIn}
+                >
                   Submit<i class="fa fa-paper-plane-o ml-2" />
                 </button>
-
               </div>
             </form>
 
             <h1 className="h1-reponsive mb-3 font">
               <strong>Or Sign-up!</strong>
             </h1>
-            <p className="lead font2">Enter an email and password for your account!</p>
+            <p className="lead font2">
+              Enter an email and password for your account!
+            </p>
 
             <form>
-              {(signUpError) ? (<p>{signUpError}</p>) : null}
+              {signUpError ? <p>{signUpError}</p> : null}
               <label htmlFor="defaultFormContactEmailEx" class="grey-text">
                 Your email
-          </label>
+              </label>
               <input
                 type="email"
                 class="form-control"
@@ -291,7 +297,7 @@ class LogIn extends React.Component {
 
               <label htmlFor="defaultFormContactSubjectEx" class="grey-text">
                 password
-          </label>
+              </label>
               <input
                 type="password"
                 class="form-control"
@@ -302,16 +308,19 @@ class LogIn extends React.Component {
               <br />
 
               <div className="text-center mt-4">
-                <button className="btn btn-outline-grey" type="button" onClick={this.onSignUp}>
+                <button
+                  className="btn btn-outline-grey"
+                  type="button"
+                  onClick={this.onSignUp}
+                >
                   Submit<i class="fa fa-paper-plane-o ml-2" />
                 </button>
               </div>
             </form>
           </div>
         </div>
-
       );
-    };
+    }
 
     return (
       <div className="row">
@@ -321,7 +330,7 @@ class LogIn extends React.Component {
         <div className="col-md-5" />
       </div>
     );
-  };
-};
+  }
+}
 
 export default LogIn;
