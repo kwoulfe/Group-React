@@ -1,6 +1,7 @@
 import React from 'react';
 import { setInStorage, getFromStorage } from '../utils/storage';
 import 'whatwg-fetch';
+import './LogIn.css';
 
 class LogIn extends React.Component {
   constructor(props) {
@@ -233,7 +234,7 @@ class LogIn extends React.Component {
             <h1 className="h1-reponsive mb-3 font">
               <strong>Log-In!</strong>
             </h1>
-            <p className="lead font2">
+            <p className="lead-font2">
               Enter your Account information to sign-in!
             </p>
 
@@ -265,19 +266,20 @@ class LogIn extends React.Component {
 
               <div className="text-center mt-4">
                 <button
-                  className="btn btn-outline-grey"
+                  className="btn btn-primary-post"
                   type="button"
                   onClick={this.onSignIn}
                 >
-                  Submit<i class="fa fa-paper-plane-o ml-2" />
+                  <i class="fa fa-paper-plane-o ml-2" />
                 </button>
               </div>
             </form>
 
             <h1 className="h1-reponsive mb-3 font">
+              <br />
               <strong>Or Sign-up!</strong>
             </h1>
-            <p className="lead font2">
+            <p className="lead-font2">
               Enter an email and password for your account!
             </p>
 
@@ -309,11 +311,11 @@ class LogIn extends React.Component {
 
               <div className="text-center mt-4">
                 <button
-                  className="btn btn-outline-grey"
+                  className="btn btn-primary-post"
                   type="button"
                   onClick={this.onSignUp}
                 >
-                  Submit<i class="fa fa-paper-plane-o ml-2" />
+                  <i class="fa fa-paper-plane-o ml-2" />
                 </button>
               </div>
             </form>

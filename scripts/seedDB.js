@@ -16,7 +16,7 @@ const userSeed = [
 
     synopsis:
       "Explore the project and fund it to your liking",
-    image1: 'https://picsum.photos/200/300/?image=1081',
+    image1: '../client/src/Assets/s-1.png',
     image2: "https://picsum.photos/200/300/?image=1056",
     image3: 'https://picsum.photos/200/300/?image=1048',
     donationGoal: 1000,
