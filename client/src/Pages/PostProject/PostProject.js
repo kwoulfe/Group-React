@@ -1,5 +1,6 @@
 import React from 'react';
 import API from '../utils/API';
+import './PostProject.css';
 
 
 class PostProject extends React.Component {
@@ -132,9 +133,9 @@ class PostProject extends React.Component {
         <div className="jumbotron text-center">
           {/* <div className="card"> */}
           <h1 className="h1-reponsive mb-3 font">
-            <strong>Project Post.</strong>
+            <strong>Project Post</strong>
           </h1>
-          <p className="lead font2">
+          <p className="lead-font2">
             To Post a project to our page fill out the information below.
         </p>
 
@@ -283,8 +284,8 @@ class PostProject extends React.Component {
             <br />
 
             <div className="text-center mt-4">
-              <button class="btn btn-outline-grey" type="submit" value="Post">
-                Submit<i class="fa fa-paper-plane-o ml-2" />
+              <button class="btn btn-primary-post" type="submit" value="Post">
+                <i class="fa fa-paper-plane-o ml-2" />
               </button>
             </div>
           </form>
