@@ -13,6 +13,7 @@ export default {
     return axios.put('/api/users/' + id, data);
   },
   newUser: function (data) {
+
     return axios.post('/api/users/', data);
   },
 
@@ -24,6 +25,5 @@ export default {
 
   getPosts: function (projectId) {
     return axios.get(`/api/comments/${projectId}`);
-
   }
 };
