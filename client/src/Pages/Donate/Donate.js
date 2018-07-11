@@ -87,74 +87,101 @@ class Donate extends React.Component {
       <div>
         {/* Jumbotron */}
         <div className="jumbotron text-center Jumbo-height">
-          <div className="row">
-            <div className="col-md-12">
-              <h1 className="h1-reponsive mb-3 font">
-                <strong>Donate to this Project:</strong>
-              </h1>
-
-              <div className="row">
+          <div className="container">
+            <div className="row donate-margin-top">
+              <div className="col-md-12">
                 <h1 className="h1-reponsive mb-3 font">
-                  <strong>{this.state.users.name}</strong>
+                  <strong>Donate to this Project: {this.state.users.projectName}</strong>
                 </h1>
-                <p className="h1-reponsive mb-3 font">
-                  <strong>Project Name Small Summary: {this.state.users.synopsis}</strong>
-                </p>
-
-                <div className="row col-md-3">
-                  <p>Donation Goal: {this.state.users.donationGoal}</p>
-                </div>
-                <div className="col-md-3">
-                  <p>Current Donation Level: {this.state.users.donationCurrent}</p>
-                </div>
-
-                <div className="col-md-3">
-                  <p>Reason wanting donation: {this.state.users.reasonForDonation}</p>
-                </div>
-                <div className="col-md-3">
-                  <p>Donation used for: {this.state.users.donationUsedFor}</p>
-                </div>
-
-                <form onSubmit={this.handleFormSubmit}>
-                  <label htmlFor="defaultFormContactNameEx" class="grey-text">
-                    Amount
-                </label>
-                  <input
-                    type="number"
-                    name="donationAdded"
-                    value={this.state.donationAdded}
-                    onChange={this.handleInputChange}
-                    id="defaultFormContactNameEx"
-                    className="form-control"
-                  />
-
-                  <br />
-
-                  <label htmlFor="defaultFormContactEmailEx" class="grey-text">
-                    Paypal or CC #
-                </label>
-                  <input
-                    type="text"
-                    name="text"
-                    value={this.state.text}
-                    onChange={this.handleInputChange}
-                    id="defaultFormContactEmailEx"
-                    className="form-control"
-                  />
-
-                  <div className="text-center mt-4">
-
-                    {/* disabled={!(this.state.author && this.state.title)} set requirments for fields */}
-                    <Link to="/thankyou">
-                      <button class="btn btn-outline-warning" type="submit" value="Post"
-                      >
-                        Add Donation<i class="fa fa-paper-plane-o ml-2" />
-                      </button>
-                    </Link>
-
-                  </div>
-                </form>
               </div>
+              <div className="row donate-details ">
+                <div className="col-md-3"></div>
+                <div className="col-md-6">
+
+                  <p className="h1-reponsive mb-3 font">
+                    <strong>Project Creator: {this.state.users.name}</strong>
+                  </p>
+                  <p className="h1-reponsive mb-3 font">
+                    <strong>Project Small Summary: {this.state.users.synopsis}</strong>
+                  </p>
+                  <div>
+                    <p>Donation Goal: {this.state.users.donationGoal}</p>
+                  </div>
+                  <div>
+                    <p>Current Donation Level: {this.state.users.donationCurrent}</p>
+                  </div>
+                  <div>
+                    <p>Reason wanting donation: {this.state.users.reasonForDonation}</p>
+                  </div>
+                  <div>
+                    <p>Donation used for: {this.state.users.donationUsedFor}</p>
+                  </div>
+                </div>
+                <div className="col-md-3"></div>
+              </div>
+
+              <form onSubmit={this.handleFormSubmit}>
+                <label htmlFor="defaultFormContactNameEx" class="grey-text">
+                  Amount
+                </label>
+                <input
+                  type="number"
+                  name="donationAdded"
+                  value={this.state.donationAdded}
+                  onChange={this.handleInputChange}
+                  id="defaultFormContactNameEx"
+                  className="form-control"
+                />
+
+                <br />
+
+                <label htmlFor="defaultFormContactEmailEx" class="grey-text">
+                  Paypal or CC #
+                </label>
+                <input
+                  type="text"
+                  name="text"
+                  value={this.state.text}
+                  onChange={this.handleInputChange}
+                  id="defaultFormContactEmailEx"
+                  className="form-control"
+                />
+
+                <div className="text-center mt-4">
+
+                  {/* disabled={!(this.state.author && this.state.title)} set requirments for fields */}
+
+
+                  <button class="btn btn-outline btn-primary-post" type="submit" value="Post" data-toggle="modal" data-target="#exampleModal"
+                  >
+                    Add Donation
+
+                    </button>
+
+
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+                    <div class="modal-dialog modal-center" role="document">
+                      <div class="modal-content">
+                        {/* <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div> */}
+                        <div class="modal-body">
+                          Thank you for your donation! please feel free to explore more projects.
+                              </div>
+                        <div class="modal-footer">
+                          <a href="/">
+                            <button type="button" class="btn btn-primary-home">Home</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
             </div>
           </div>
         </div>
