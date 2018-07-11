@@ -41,5 +41,5 @@ CSS react integration that createed issues with our backend happened a lot towar
 
 ## Improvements
 
-In the future we would like to have an image uploader instead of an image link when you create a project,paypal integration with the donation page, perhaps a sleeker formatting, a ratings system for people to rate other peoples projects, a views tally on each of the display cards, and actual filters: to filter thru users content (search bar, most viewed, highest rated, etc.). We would also like to have our LogIn working properly. 
+In the future we would like to have an image uploader instead of an image link when you create a project,paypal integration with the donation page (Right now we just have basically a dummy page with no exchange of CC info[that field is not required to donate] or paypal information), perhaps a sleeker formatting, a ratings system for people to rate other peoples projects, a views tally on each of the display cards, and actual filters: to filter thru users content (search bar, most viewed, highest rated, etc.). We would also like to have our LogIn working properly. 
 
