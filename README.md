@@ -31,13 +31,14 @@ Using ES6, React, MDB-Bootstrap, CSS Animation, PixiJS, MongoDB, B-Crypt, Node, 
 Ifra and Shaughn worked on the user interface - from conception and planning, creating templates, design,and branding. Tanner made general page layouts, some front-end work, bridged the backend/frontend together via routing, transferred database data to the app, finsihed the API routing, created a working comment section for each project page, and created the functionality for donating. Kevin established our folder structure for our project, worked on API routing, created the database and dummy data, linked the database properly throughout our folder structure, logIn/signUp and other backend functionality.
 
 ![alt-text](client/src/Assets/homePage-screenShot6.JPG)
-![alt-text](client/src/Assets/homePage-screenShot7.JPG)
 
 ## Challenges
 
 The LogIn/SignUp functionality proved to be more difficult than originally thought. It is essentially half working. We would like to revist this eventually.
 
 CSS react integration that createed issues with our backend happened a lot towards the end of the project, which confused the team. We were able to come up with a solution on the spot, but would also like to dive into this as well and figure out the reasoning for it. 
+
+![alt-text](client/src/Assets/homePage-screenShot7.JPG)
 
 ## Improvements
 
