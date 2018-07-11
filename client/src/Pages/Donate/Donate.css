@@ -17,3 +17,20 @@ float: left;
 font-size: 15px;
 
 }
+
+.btn-primary-home {
+    color: #fff;
+    background-color: #00d8e7 !important;
+    border-color: #00d8e7 !important;
+    width:100%;
+    align-content: center;
+}
+
+.donate-margin-top {
+    margin-top: 50px;
+}
+
+.donate-details {
+    text-align:left;
+
+}
