@@ -18,7 +18,7 @@ export default {
 
   // Comment API's
   createPost: function(data) {
-    return axios.post('/api/commets/', data);
+    return axios.post('/api/comments/', data);
   },
 
   getPosts: function() {
