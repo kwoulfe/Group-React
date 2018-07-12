@@ -8,7 +8,7 @@ import Home from './Pages/Home';
 import LogIn from './Pages/LogIn';
 import SignUp from './Pages/SignUp';
 import Error from './Pages/Error';
-import Navbar from './Components/NavBar/NavBar';
+import Navbar from './Components/NavBar';
 import Footer from './Components/Footer';
 import Project from './Pages/Project';
 import Donate from './Pages/Donate';
